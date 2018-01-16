@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Santa Inc.</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <meta property="og:image:url" content="preview_dolph_wide.png"/>
+    <meta property="og:description" content="루돌프와 요정을 착취해보세요!"/>
+  </head>
+  <body>
+    <div id="sidebar">
+      <div id="present">
+          <img id="present-img" src="assets/present.png"/>
+          <p id="present-num">CLICK!</p>
+          <p id="present-info">1초당 0개 생산중!</p>
+          <ul id="menu">
+              <li class="m-on" id="hire">고용</li>
+              <li class="m-off" id="policy">정책</li>
+              <li class="m-off" id="manage">해고</li>
+          </ul>
+      </div>
+      <ul id="item-list" class="on list">
+          <li class="preview">
+              <img class="item-img preview-img" src="assets/dolf.gif"/>
+              <p>???<img class="item-present-img" src="assets/present.png"/>
+                  <span class="t">30</span>
+                  <br/><span class="pr">??? ~ ???개 생산</span>
+              </p>
+          </li>
+      </ul>
+      <ul id="policy-list" class="off list">
+      </ul>
+      <ul id="manage-list" class="off list">
+      </ul>
+    </div>
+
+    <a target="_blank" href="https://goo.gl/YuwSZv"><img class="top-icon" src="assets/ui/facebook.png"/></a>
+    <img class="top-icon" id="credit-icon" src="assets/ui/credit.png"/>
+    <img class="top-icon" id="sound-icon" src="assets/ui/sound-on.png"/>
+    <div id="play-ground">
+    </div>
+  </body>
+</html>
