@@ -2,10 +2,10 @@
   "name": "santa-inc",
   "version": "1.1.0",
   "description": "That's right. We have to code for Christmas.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress -p",
+    "build": "webpack --progress -p --optimize-minimize",
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open"
   },
@@ -31,6 +31,6 @@
     "webpack-dev-server": "^2.11.0"
   },
   "dependencies": {
-    "jquery": "^3.2.1"
+    "jquery": "^3.3.1"
   }
 }

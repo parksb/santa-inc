@@ -4,13 +4,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/main.js',
+  entry: './src/main.js',
   output: {
-    path: path.resolve(__dirname, './dist/'),
+    path: path.resolve(__dirname, './dist/src/'),
     filename: 'bundle.js'
   },
   devServer: {
-    contentBase: path.join(__dirname, './src/'),
+    contentBase: path.join(__dirname, './dist/'),
     compress: true,
     port: 9000
   },
@@ -29,10 +29,15 @@ module.exports = {
     ]
   },
   plugins: [
-    new UglifyJsPlugin(),
     new CopyWebpackPlugin([{
-      from: path.join(__dirname, './src/'),
+      from: path.join(__dirname, './public/'),
       to: path.join(__dirname, './dist/')
+    }, {
+      from: path.join(__dirname, './assets/'),
+      to: path.join(__dirname, './dist/assets/')
+    }, {
+      from: path.join(__dirname, './src/data.js'),
+      to: path.join(__dirname, './dist/src/')
     }])
   ]
 };

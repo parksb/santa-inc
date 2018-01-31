@@ -17,7 +17,7 @@ body {
     margin:0;
     padding:0;
     background-color:#E9EAED;
-    background-image:url("img/floor.png");
+    background-image:url("assets/floor.png");
     background-repeat:repeat;
     background-size:5%;
     overflow-x:hidden;
