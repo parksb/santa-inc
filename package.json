@@ -5,9 +5,10 @@
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --progress -p --optimize-minimize",
+    "build": "webpack --progress -p",
     "watch": "webpack --progress --watch",
-    "server": "webpack-dev-server --open"
+    "server": "webpack-dev-server --open",
+    "dist": "webpack --progress -p --optimize-minimize"
   },
   "repository": {
     "type": "git",

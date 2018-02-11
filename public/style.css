@@ -1,206 +1,207 @@
-@import url(http://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+@import url(//cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
 
 li {
-    list-style:none;
+    list-style: none;
 }
 
 a {
-    text-decoration:none;
+    text-decoration: none;
 }
 
 img {
-    border:0;
+    border: 0;
 }
 
 body {
-    font-family:'Noto Sans Korean',sans-serif;
-    margin:0;
-    padding:0;
-    background-color:#E9EAED;
-    background-image:url("assets/floor.png");
-    background-repeat:repeat;
-    background-size:5%;
-    overflow-x:hidden;
-    overflow-y:hidden;
+    font-family: 'Noto Sans Korean',sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E9EAED;
+    background-image: url("assets/floor.png");
+    background-repeat: repeat;
+    background-size: 5%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .top-icon {
-    width:20px;
-    padding:10px;
-    float:right;
-    cursor:pointer;
+    width: 20px;
+    padding: 10px;
+    float: right;
+    cursor: pointer;
 }
 
 #play-ground {
-    position:relative;
-    z-index:1;
+    position: relative;
+    z-index: 1;
 }
 
 #sidebar{
-    position:fixed;
-    background-color:#333333;
-    width:300px;
-    float:left;
-    overflow-y:auto;
-    overflow-x:hidden;
-    z-index:999;
+    position: fixed;
+    background-color: #333333;
+    width: 300px;
+    height: 100%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 999;
 }
 
 ::-webkit-scrollbar {
-    background:#333333;
-    width:5px;
+    background: #333333;
+    width: 5px;
 }
 ::-webkit-scrollbar-thumb {
-    background:#0DA22A;
+    background: #0DA22A;
 }
 ::-webkit-scrollbar-thumb:window-inactive {
-    background:#0D921A;
+    background: #0D921A;
 }
 ::-webkit-scrollbar-thumb:hover {
-    background:#0D921A;
+    background: #0D921A;
 }
 ::-webkit-scrollbar-track:active {
-    background:#333333;
+    background: #333333;
 }
 
 #present {
-    height:300px;
-    width:300px;
-    background-color:brown;
-    margin-bottom:30px;
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    margin-bottom: 30px;
 }
 
 #present-img {
-    margin-left:70px;
-    margin-top:35px;
-    cursor:pointer;
+    margin-left: 70px;
+    margin-top: 35px;
+    cursor: pointer;
 }
 
 #present-num {
-    margin-top:-10px;
-    color:#F3AC00;
-    font-weight:bold;
-    font-size:24pt;
-    text-align:center;
+    margin-top: -10px;
+    color: #F3AC00;
+    font-weight: bold;
+    font-size: 24pt;
+    text-align: center;
 }
 
 #present-info {
-    margin-top:-30px;
-    margin-bottom:30px;
-    color:#F3AC00;
-    font-weight:bold;
-    font-size:10pt;
-    text-align:center;
+    margin-top: -30px;
+    margin-bottom: 30px;
+    color: #F3AC00;
+    font-weight: bold;
+    font-size: 10pt;
+    text-align: center;
 }
 
 .t {
-    color:#F3AC00;
+    color: #F3AC00;
 }
 
 .pr {
-    font-weight:normal;
+    font-weight: normal;
 }
 
 .floor {
-    width:380px;
-    height:200px;
-    float:left;
-    margin-top:20px;
-    margin-left:10px;
+    width: 380px;
+    height: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
 }
 
 #menu {
-    width:100%;
-    padding:0;
+    width: 100%;
+    padding: 0;
 }
 
 #menu li {
-    padding-top:10px;
-    padding-bottom:10px;
-    width:100px;
-    float:left;
-    text-align:center;
-    font-weight:bold;
-    cursor:pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
 }
 
 #menu li:hover {
-    background-color:#A04030;
+    background-color: #A04030;
 }
 
 .m-on {
-    background-color:#A04030;
+    background-color: #A04030;
 }
 
 .m-off {
-    background-color:#C05040;
+    background-color: #C05040;
 }
 
 .on {
-    display:inline;
+    display: inline;
 }
 .off {
-    display:none;
+    display: none;
 }
 
 .list {
-    padding:0;
+    padding: 0;
 }
 
 .list li {
-    width:100%;
-    margin-top:3px;
-    background-color:#3F3F3F;
-    padding-top:5px;
-    padding-bottom:5px;
-    cursor:pointer;
+    width: 100%;
+    margin-top: 3px;
+    background-color: #3F3F3F;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    cursor: pointer;
 }
 
 .list li:hover {
-    background-color:#303030;
+    background-color: #303030;
 }
 
 .item-img {
-    width:60px;
-    height:60px;
-    margin-left:20px;
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
 }
 
 #item-list li p, #manage-list li p {
-    color:white;
-    font-size:12pt;
-    font-weight:bold;
-    float:right;
-    text-align:right;
-    margin-right:30px;
-    margin-top:10px;
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+    float: right;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 10px;
 }
 
 #policy-list li {
-    font-size:12pt;
-    font-weight:bold;
-    padding-left:20px;
-    color:white;
+    font-size: 12pt;
+    font-weight: bold;
+    padding-left: 20px;
+    color: white;
 }
 
 #policy-list p {
-    word-break:keep-all;
-    padding-right:30px;
+    word-break: keep-all;
+    padding-right: 30px;
 }
 
 .item-present-img {
-    width:16px;
-    height:16px;
-    margin-left:5px;
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
  }
 
 .preview-img {
-    filter:brightness(0%);
-    -webkit-filter:brightness(0%);
+    filter: brightness(0%);
+    -webkit-filter: brightness(0%);
 }
 
 #play-ground img {
-    position:absolute;
-    width:80px;
-    height:80px;
+    position: absolute;
+    width: 80px;
+    height: 80px;
 }
