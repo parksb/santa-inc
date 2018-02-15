@@ -36,8 +36,8 @@ module.exports = {
       from: path.join(__dirname, './assets/'),
       to: path.join(__dirname, './dist/assets/')
     }, {
-      from: path.join(__dirname, './src/data.js'),
-      to: path.join(__dirname, './dist/src/')
+      from: path.join(__dirname, './data/'),
+      to: path.join(__dirname, './dist/data/')
     }])
   ]
 };
