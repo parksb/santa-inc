@@ -1,128 +1,149 @@
 [
   {
-    "id" : 0,
-    "title" : "리본묶기 연습",
-    "description" : "생각보다 어렵습니다.",
-    "effectDescription" : "선물상자 클릭할 때 선물 1.2개 생산",
-    "cost" : 20
-  }, {
-    "id" : 1,
-    "title" : "스마트 업무 환경",
-    "description" : "일을 더 빠르고 쉽게!",
-    "effectDescription" : "선물상자 클릭할 때 선물 1.5개 생산",
-    "cost" : 100,
-    "require" : 0
-  }, {
-    "id" : 2,
-    "title" : "야근문화",
-    "description" : "루돌프는 코가 빛나서 밤에 일하기 적합합니다.",
-    "effectDescription" : "루돌프 최대 생산 +1",
-    "cost" : 150,
-    "require" : 1
-  }, {
-    "id" : 3,
-    "title" : "열정페이",
-    "description" : "너 이 일 좋아하잖아? 그냥 해줄 수 없어?",
-    "effectDescription" : "인턴 요정 최대 생산 +1",
-    "cost" : 300,
-    "require" : 2
-  }, {
-    "id" : 4,
-    "title" : "멀티태스킹",
-    "description" : "요정은 의외로 많은 일을 할 수 있습니다.",
-    "effectDescription" : "인턴 요정 최소 생산 +1",
-    "cost" : 350,
-    "require" : 3
-  }, {
-    "id" : 5,
-    "title" : "알바 요정 채용",
-    "description" : "모집. 선물설계보조 ○명",
-    "effectDescription" : "선물상자 클릭할 때 선물 2개 생산",
-    "cost" : 800,
-    "require" : 3
-  }, {
-    "id" : 6,
-    "title" : "애사심 테스트",
-    "description" : "회사를 위해서라면 뭐든 할 수 있겠죠.",
-    "effectDescription" : "정규직 요정 최대 생산 +1",
-    "cost" : 900,
-    "require" : 4
-  }, {
-    "id" : 7,
-    "title" : "정장 착용 의무화",
-    "description" : "곧 사내 유니폼을 만들 예정입니다.",
-    "effectDescription" : "정규직 요정 최소 생산 +1",
-    "cost" : 1500,
-    "require" : 6
-  }, {
-    "id" : 8,
-    "title" : "사상검증",
-    "description" : "어느 정당을 지지하세요?",
-    "effectDescription" : "정규직 요정 최대 생산 +1",
-    "cost" : 1400,
-    "require" : [5, 6]
-  }, {
-    "id" : 9,
-    "title" : "노동개혁",
-    "description" : "노동개혁으로 루돌프와 요정에게 일자리를!",
-    "effectDescription" : "노동개혁 프로젝트 시작",
-    "cost" : 30000,
-    "require" : 8
-  }, {
-    "id" : 10,
-    "title" : "감독관 배치",
-    "description" : "거기 루돌프12, 똑바로 안하지?",
-    "effectDescription" : "현재 소지한 모든 아이템 생산 +1",
-    "cost" : 19000,
-    "require" : 8
-  }, {
-    "id" : 11,
-    "title" : "일반해고",
-    "description" : "노동시장 유연화를 위한 정책입니다.",
-    "effectDescription" : "모든 아이템 해고 수입 x2",
-    "cost" : 8000,
-    "require" : 9
-  }, {
-    "id" : 12,
-    "title" : "임금피크제",
-    "description" : "청년 루돌프 일자리를 창출합니다.",
-    "effectDescription" : "현재 소지한 모든 아이템 생산 +2",
-    "cost" : 28000,
-    "require" : 9
-  }, {
-    "id" : 13,
-    "title" : "비정규직 사용기간 연장",
-    "description" : "이대로만 하면 정직원이 되는거죠?",
-    "effectDescription" : "인턴 요정 최대 생산 +2",
-    "cost" : 35000,
-    "require" : 9
-  }, {
-    "id" : 14,
-    "title" : "노조원 급여 감축",
-    "description" : "노조에 가입했다고? 나랑 싸우고 싶은거야?",
-    "effectDescription" : "노조상태 아이템 생산 +1",
-    "cost" : 500,
-    "require" : [9, 10]
-  }, {
-    "id" : 15,
-    "title" : "노조 활동 감시",
-    "description" : "망원경, 카메라, 녹음기, 모든 걸 사용하세요.",
-    "effectDescription" : "노조상태 아이템 생산 +1",
-    "cost" : 25000,
-    "require" : 14
-  }, {
-    "id" : 16,
-    "title" : "노조 소송",
-    "description" : "디스 이즈 산타 스타일!",
-    "effectDescription" : "노조 파괴를 위한 첫 걸음",
-    "cost" : 50000,
-    "require" : 14
-  }, {
-    "id" : 17,
-    "title" : "노조 파괴",
-    "description" : "마지막 단계입니다.",
-    "effectDescription" : "노조상태 아이템 원상복귀",
-    "cost" : 70000,
-    "require" : [15, 16]
+    "id": 0,
+    "title": "리본묶기 연습",
+    "description": "생각보다 어렵습니다.",
+    "effectDescription": "선물상자 클릭할 때 선물 1.2개 생산",
+    "cost": 20,
+    "require": -1
+  },
+  {
+    "id": 1,
+    "title": "스마트 업무 환경",
+    "description": "일을 더 빠르고 쉽게!",
+    "effectDescription": "선물상자 클릭할 때 선물 1.5개 생산",
+    "cost": 100,
+    "require": 0
+  },
+  {
+    "id": 2,
+    "title": "야근문화",
+    "description": "루돌프는 코가 빛나서 밤에 일하기 적합합니다.",
+    "effectDescription": "루돌프 최대 생산 +1",
+    "cost": 150,
+    "require": 1
+  },
+  {
+    "id": 3,
+    "title": "열정페이",
+    "description": "너 이 일 좋아하잖아? 그냥 해줄 수 없어?",
+    "effectDescription": "인턴 요정 최대 생산 +1",
+    "cost": 300,
+    "require": 2
+  },
+  {
+    "id": 4,
+    "title": "멀티태스킹",
+    "description": "요정은 의외로 많은 일을 할 수 있습니다.",
+    "effectDescription": "인턴 요정 최소 생산 +1",
+    "cost": 350,
+    "require": 3
+  },
+  {
+    "id": 5,
+    "title": "알바 요정 채용",
+    "description": "모집. 선물설계보조 ○명",
+    "effectDescription": "선물상자 클릭할 때 선물 2개 생산",
+    "cost": 800,
+    "require": 4
+  },
+  {
+    "id": 7,
+    "title": "애사심 테스트",
+    "description": "회사를 위해서라면 뭐든 할 수 있겠죠.",
+    "effectDescription": "정규직 요정 최대 생산 +1",
+    "cost": 900,
+    "require": 5
+  },
+  {
+    "id": 8,
+    "title": "정장 착용 의무화",
+    "description": "곧 사내 유니폼을 만들 예정입니다.",
+    "effectDescription": "정규직 요정 최소 생산 +1",
+    "cost": 1500,
+    "require": 5
+  },
+  {
+    "id": 10,
+    "title": "사상검증",
+    "description": "어느 정당을 지지하세요?",
+    "effectDescription": "정규직 요정 최대 생산 +1",
+    "cost": 1400,
+    "require": 7
+  },
+  {
+    "id": 6,
+    "title": "노동개혁",
+    "description": "노동개혁으로 루돌프와 요정에게 일자리를!",
+    "effectDescription": "노동개혁 프로젝트 시작",
+    "cost": 30000,
+    "require": 8
+  },
+  {
+    "id": 9,
+    "title": "감독관 배치",
+    "description": "거기 루돌프12, 똑바로 안하지?",
+    "effectDescription": "현재 소지한 모든 아이템 생산 +1",
+    "cost": 19000,
+    "require": 8
+  },
+  {
+    "id": 11,
+    "title": "일반해고",
+    "description": "노동시장 유연화를 위한 정책입니다.",
+    "effectDescription": "모든 아이템 해고 수입 x2",
+    "cost": 8000,
+    "require": 9
+  },
+  {
+    "id": 12,
+    "title": "임금피크제",
+    "description": "청년 루돌프 일자리를 창출합니다.",
+    "effectDescription": "현재 소지한 모든 아이템 생산 +2",
+    "cost": 28000,
+    "require": 9
+  },
+  {
+    "id": 13,
+    "title": "비정규직 사용기간 연장",
+    "description": "이대로만 하면 정직원이 되는거죠?",
+    "effectDescription": "인턴 요정 최대 생산 +2",
+    "cost": 35000,
+    "require": 9
+  },
+  {
+    "id": 14,
+    "title": "노조원 급여 감축",
+    "description": "노조에 가입했다고? 나랑 싸우고 싶은거야?",
+    "effectDescription": "노조상태 아이템 생산 +1",
+    "cost": 500,
+    "require": 13
+  },
+  {
+    "id": 15,
+    "title": "노조 활동 감시",
+    "description": "망원경, 카메라, 녹음기, 모든 걸 사용하세요.",
+    "effectDescription": "노조상태 아이템 생산 +1",
+    "cost": 25000,
+    "require": 13
+  },
+  {
+    "id": 16,
+    "title": "노조 소송",
+    "description": "디스 이즈 산타 스타일!",
+    "effectDescription": "노조 파괴를 위한 첫 걸음",
+    "cost": 50000,
+    "require": 15
+  },
+  {
+    "id": 17,
+    "title": "노조 파괴",
+    "description": "마지막 단계입니다.",
+    "effectDescription": "노조상태 아이템 원상복귀",
+    "cost": 70000,
+    "require": [
+      14,
+      15
+    ]
   }
 ]

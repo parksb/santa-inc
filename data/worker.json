@@ -1,0 +1,72 @@
+[
+  {
+    "k_name": "루돌프",
+    "name": "dolf",
+    "img": "img/dolf.gif",
+    "num": 0,
+    "prod": 2,
+    "addi": 1,
+    "cost": 30,
+    "lv": false
+  },
+  {
+    "k_name": "인턴 요정",
+    "name": "elf",
+    "img": "img/elf.gif",
+    "num": 0,
+    "prod": 5,
+    "addi": 2,
+    "cost": 200,
+    "lv": false
+  },
+  {
+    "k_name": "정규직 요정",
+    "name": "elf2",
+    "img": "img/elf2.gif",
+    "num": 0,
+    "prod": 7,
+    "addi": 2,
+    "cost": 600,
+    "lv": false
+  },
+  {
+    "k_name": "선물 기계",
+    "name": "machine",
+    "img": "img/machine.gif",
+    "num": 0,
+    "prod": 10,
+    "addi": 4,
+    "cost": 1200,
+    "lv": false
+  },
+  {
+    "k_name": "사이보그 요정",
+    "name": "cyborg",
+    "img": "img/cyborg.png",
+    "num": 0,
+    "prod": 12,
+    "addi": 6,
+    "cost": 3000,
+    "lv": false
+  },
+  {
+    "k_name": "아이들",
+    "name": "children",
+    "img": "img/children.gif",
+    "num": 0,
+    "prod": 10,
+    "addi": 4,
+    "cost": 6000,
+    "lv": false
+  },
+  {
+    "k_name": "커플",
+    "name": "couple",
+    "img": "img/couple.png",
+    "num": 0,
+    "prod": 15,
+    "addi": 9,
+    "cost": 10000,
+    "lv": false
+  }
+]

@@ -1,4 +1,6 @@
 import $ from 'jquery';
-import Init from './init';
+import init from './init';
+import ui from './ui';
 
-const init = new Init();
+const initial = new init();
+const userInterface = new ui();
