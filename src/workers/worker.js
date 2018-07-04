@@ -1,9 +1,9 @@
 class worker {
   constructor(output) {
-    this.addi = 1;
-    this.cost = 30;
-    this.name = 'rudolph';
-    this.korName = '루돌프';
+    this.addi = 0;
+    this.cost = 0;
+    this.name = '';
+    this.korName = '';
     this.output = output;
   }
 
@@ -30,6 +30,8 @@ class worker {
   getOutput() {
     return this.output;
   }
+
+  next() { }
 }
 
 export default worker;

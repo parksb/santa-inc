@@ -13,7 +13,7 @@ class ui {
   drawItemList(worker) {
     $(this.PREVIEW).remove(); // 다음 아이템 미리보기를 지운다.
 
-    //새로 열리는 아이템을 출력한다.
+    // 새로 열리는 아이템을 출력한다.
     $(this.WORKER_LIST).append(
       `<li id="${worker.getName()}">` +
         `<img class="item-img" src="${worker.getImg()}"/>` +
@@ -24,7 +24,7 @@ class ui {
         `</p>` +
       `</li>`
     );
-
+    
     // 다음 아이템 미리보기를 출력한다. (아이템 그림 실루엣)
     $(this.WORKER_LIST).append(
       `<li class="preview">` +
