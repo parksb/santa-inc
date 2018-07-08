@@ -1,15 +1,20 @@
 import Worker from './Worker';
+import RegularElf from './RegularElf';
 
 class InternElf extends Worker {
   constructor() {
     super();
 
-    this.addi = 1;
-    this.cost = 30;
-    this.output = 3;
+    this.addi = 2;
+    this.cost = 200;
+    this.output = 5;
     this.img = '/assets/elf.gif';
     this.name = 'internElf';
-    this.korName = '인턴요정';
+    this.korName = '인턴 요정';
+  }
+
+  next() {
+    return new RegularElf();
   }
 }
 

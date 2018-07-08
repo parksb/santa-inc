@@ -24,7 +24,7 @@ function attachEvent() {
       if (worker.getName() == id && totalPresent >= worker.getCost()) {
         workers.push(worker);
         totalOutput += worker.getOutput();
-        totalPresent -= worker.getCost();
+        updatePresent(-1 * worker.getCost());
         break;
       }
     }
