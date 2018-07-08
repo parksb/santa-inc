@@ -16,25 +16,32 @@ function updatePresent(n) {
   $('#present-num').text(totalPresent.toFixed(0));
 }
 
-$(document).ready(() => {
+function attachEvent() {
   $(userInterface.getElements().workerList).delegate('li', 'click', (e) => {
-    const costRatio = 3;
+    const id = e.currentTarget.id;
 
-    console.log(e.currentTarget);
+    for (let worker = new Rudolph(); worker != currentWorkerLevel; worker = worker.next()) {
+      if (worker.getName() == id && totalPresent >= worker.getCost()) {
+        workers.push(worker);
+        totalOutput += worker.getOutput();
+        totalPresent -= worker.getCost();
+        break;
+      }
+    }
   });
 
-  $("#present-img").click(function() {
+  $("#present-img").click(function () {
     updatePresent(clickPresent);
   });
+}
+
+$(document).ready(() => {
+  attachEvent();
 
   setInterval(() => {
     if (totalPresent >= currentWorkerLevel.getCost()) {
       userInterface.drawWorkerList(currentWorkerLevel);
       currentWorkerLevel = currentWorkerLevel.next();
-    }
-    
-    for (let i = 0; i < workers.length; i++) {
-      totalOutput += workers[i].getOutput();
     }
 
     updatePresent(totalOutput);
