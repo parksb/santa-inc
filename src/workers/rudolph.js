@@ -1,19 +1,21 @@
-import worker from './worker';
-import internElf from './internElf';
+import Worker from './Worker';
+import InternElf from './InternElf';
 
-class rudolph extends worker {
-  constructor(output) {
-    super(output);
-
+class Rudolph extends Worker {
+  constructor() {
+    super();
+    
     this.addi = 1;
-    this.cost = 30;
+    this.cost = 1;
+    this.output = 2;
+    this.img = '/assets/dolf.gif';
     this.name = 'rudolph';
     this.korName = '루돌프';
   }
 
   next() {
-    return new internElf();
+    return new InternElf();
   }
 }
 
-export default rudolph;
+export default Rudolph;

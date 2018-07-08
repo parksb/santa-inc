@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-class init {
+class Init {
   getJsonData(path) {
     const data = JSON.parse($.ajax({
       url: path,
@@ -30,4 +30,4 @@ class init {
   }
 }
 
-export default init;
+export default Init;

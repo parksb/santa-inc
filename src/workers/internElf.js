@@ -1,11 +1,16 @@
-import worker from './worker';
+import Worker from './Worker';
 
-class internElf extends worker {
+class InternElf extends Worker {
   constructor() {
-    super(2);
+    super();
 
-    this.addi = 2;
+    this.addi = 1;
+    this.cost = 30;
+    this.output = 3;
+    this.img = '/assets/elf.gif';
+    this.name = 'internElf';
+    this.korName = '인턴요정';
   }
 }
 
-export default internElf;
+export default InternElf;

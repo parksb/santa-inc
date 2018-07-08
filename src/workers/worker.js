@@ -1,10 +1,11 @@
-class worker {
-  constructor(output) {
+class Worker {
+  constructor() {
     this.addi = 0;
     this.cost = 0;
     this.name = '';
     this.korName = '';
-    this.output = output;
+    this.output = 0;
+    this.img = '';
   }
 
   getCost() {
@@ -34,4 +35,4 @@ class worker {
   next() { }
 }
 
-export default worker;
+export default Worker;
