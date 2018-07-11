@@ -3,7 +3,7 @@ import Worker from './Worker';
 class Couple extends Worker {
   constructor() {
     super();
-    
+
     this.addi = 9;
     this.cost = 10000;
     this.output = 15;

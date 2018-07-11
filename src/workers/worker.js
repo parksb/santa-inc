@@ -32,6 +32,10 @@ class Worker {
     return this.output;
   }
 
+  setCost(cost) {
+    this.cost = cost;
+  }
+
   next() { }
 }
 

@@ -4,7 +4,7 @@ import Machine from './Machine';
 class RegularElf extends Worker {
   constructor() {
     super();
-    
+
     this.addi = 2;
     this.cost = 600;
     this.output = 7;

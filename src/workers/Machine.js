@@ -4,7 +4,7 @@ import CyborgElf from './CyborgElf';
 class Machine extends Worker {
   constructor() {
     super();
-    
+
     this.addi = 4;
     this.cost = 1200;
     this.output = 10;

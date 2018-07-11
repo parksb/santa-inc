@@ -1,5 +1,5 @@
-class policy {
+class Policy {
   constructor() {
-
+    // TODO: implement this
   }
 }

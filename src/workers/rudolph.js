@@ -4,7 +4,7 @@ import InternElf from './InternElf';
 class Rudolph extends Worker {
   constructor() {
     super();
-    
+
     this.addi = 1;
     this.cost = 1;
     this.output = 2;

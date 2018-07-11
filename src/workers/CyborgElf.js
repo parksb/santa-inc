@@ -4,7 +4,7 @@ import Couple from './InternElf';
 class CyborgElf extends Worker {
   constructor() {
     super();
-    
+
     this.addi = 6;
     this.cost = 3000;
     this.output = 12;
