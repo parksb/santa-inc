@@ -21,7 +21,7 @@ const workerList = {
   internElf: InternElf,
   regularElf: RegularElf,
   machine: Machine,
-  cyborg: CyborgElf,
+  cyborgElf: CyborgElf,
   couple: Couple,
 };
 
