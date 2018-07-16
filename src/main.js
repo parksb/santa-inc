@@ -1,6 +1,11 @@
 import $ from 'jquery';
 import Interface from './Interface';
 import Rudolph from './workers/Rudolph';
+import InternElf from './workers/InternElf';
+import RegularElf from './workers/RegularElf';
+import Machine from './workers/Machine';
+import CyborgElf from './workers/CyborgElf';
+import Couple from './workers/Couple';
 
 const userInterface = new Interface();
 
@@ -11,6 +16,15 @@ let totalOutput = 0;
 let totalPresent = 0;
 let currentWorkerLevel = new Rudolph();
 
+const workerList = {
+  rudolph: Rudolph,
+  internElf: InternElf,
+  regularElf: RegularElf,
+  machine: Machine,
+  cyborg: CyborgElf,
+  couple: Couple,
+};
+
 function updatePresent(n) {
   totalPresent += n;
   $('#present-num').text(totalPresent.toFixed(0));
@@ -19,19 +33,15 @@ function updatePresent(n) {
 function attachEvent() {
   $(userInterface.getElements().workerList).delegate('li', 'click', (e) => {
     const { id } = e.currentTarget;
+    const worker = new workerList[id]();
 
-    for (let worker = new Rudolph(); worker !== currentWorkerLevel; worker = worker.next()) {
-      if (worker.getName() === id && totalPresent >= worker.getCost()) {
-        workers.push(worker);
-        totalOutput += worker.getOutput();
+    if (totalPresent >= worker.getCost()) {
+      workers.push(worker);
+      totalOutput += worker.getOutput();
 
-        worker.setCost(10);
-        console.log(worker.getCost());
-        $(`#${id} .t`).text(worker.getCost());
+      $(`#${id} .t`).text(worker.getCost());
 
-        updatePresent(-1 * worker.getCost());
-        break;
-      }
+      updatePresent(-1 * worker.getCost());
     }
   });
 
