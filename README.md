@@ -1,4 +1,7 @@
 # Santa Inc.
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/ParkSB/santa-inc.svg)](https://greenkeeper.io/)
+
 그렇습니다. 크리스마스에는 역시 코딩이죠. 
  
 ## [PLAY (Web)](https://harooo.com/oddgame/santa/)
