@@ -5,7 +5,6 @@ class Couple extends Worker {
     super();
 
     this.addi = 9;
-    this.cost = 10000;
     this.output = 15;
     this.img = '/assets/couple.gif';
     this.name = 'couple';

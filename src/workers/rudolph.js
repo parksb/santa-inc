@@ -6,7 +6,6 @@ class Rudolph extends Worker {
     super();
 
     this.addi = 1;
-    this.cost = 1;
     this.output = 2;
     this.img = '/assets/dolf.gif';
     this.name = 'rudolph';

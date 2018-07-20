@@ -1,14 +1,13 @@
 class Worker {
   constructor() {
     this.addi = 0;
-    this.cost = 0;
     this.name = '';
     this.korName = '';
     this.output = 0;
     this.img = '';
   }
 
-  getCost() {
+  static getCost() {
     return this.cost;
   }
 
@@ -32,8 +31,9 @@ class Worker {
     return this.output;
   }
 
-  setCost(cost) {
-    this.cost = cost;
+  static increaseCost() {
+    const costRatio = 3;
+    this.cost += Math.floor(this.cost / costRatio);
   }
 
   next() { }

@@ -6,7 +6,6 @@ class InternElf extends Worker {
     super();
 
     this.addi = 2;
-    this.cost = 200;
     this.output = 5;
     this.img = '/assets/elf.gif';
     this.name = 'internElf';

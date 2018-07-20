@@ -6,7 +6,6 @@ class RegularElf extends Worker {
     super();
 
     this.addi = 2;
-    this.cost = 600;
     this.output = 7;
     this.img = '/assets/elf2.gif';
     this.name = 'regularElf';

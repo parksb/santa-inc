@@ -2,14 +2,14 @@ import $ from 'jquery';
 
 class Game {
   constructor() {
-    this.workers = [];
+    this.hiredWorkers = [];
     this.totalPresent = 0;
     this.totalOutput = 0;
     this.clickPresent = 1;
   }
 
-  getWorkers() {
-    return this.workers;
+  getHiredWorkers() {
+    return this.hiredWorkers;
   }
 
   getTotalPresent() {

@@ -6,7 +6,6 @@ class CyborgElf extends Worker {
     super();
 
     this.addi = 6;
-    this.cost = 3000;
     this.output = 12;
     this.img = '/assets/cyborg.png';
     this.name = 'cyborgElf';
