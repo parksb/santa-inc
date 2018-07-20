@@ -1,4 +1,10 @@
 import $ from 'jquery';
+import Rudolph from './workers/Rudolph';
+import InternElf from './workers/InternElf';
+import RegularElf from './workers/RegularElf';
+import Machine from './workers/Machine';
+import CyborgElf from './workers/CyborgElf';
+import Couple from './workers/Couple';
 
 class Interface {
   constructor() {
@@ -50,6 +56,31 @@ class Interface {
         '</p>' +
       '</li>');
   } // drawPolicyList
+
+  attachEvent(game) {
+    const workerList = {
+      rudolph: Rudolph,
+      internElf: InternElf,
+      regularElf: RegularElf,
+      machine: Machine,
+      cyborgElf: CyborgElf,
+      couple: Couple,
+    };
+
+    $(this.getElements().workerList).delegate('li', 'click', (e) => {
+      const { id } = e.currentTarget;
+      const worker = new workerList[id]();
+
+      if (game.getTotalPresent() >= worker.getCost()) {
+        game.getWorkers().push(worker);
+        game.addTotalOutput(worker.getOutput());
+
+        $(`#${id} .t`).text(worker.getCost());
+
+        game.updateTotalPresent(-1 * worker.getCost());
+      }
+    });
+  }
 }
 
 export default Interface;
