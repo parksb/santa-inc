@@ -25,7 +25,7 @@ class Game {
   }
 
   addWorker(worker) {
-    this.workers.push(worker);
+    this.hiredWorkers.push(worker);
   }
 
   addTotalOutput(val) {
