@@ -35,9 +35,6 @@ module.exports = {
     }, {
       from: path.join(__dirname, './assets/'),
       to: path.join(__dirname, './dist/assets/')
-    }, {
-      from: path.join(__dirname, './data/'),
-      to: path.join(__dirname, './dist/data/')
     }])
   ]
 };
