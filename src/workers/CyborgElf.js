@@ -1,5 +1,5 @@
 import Worker from './Worker';
-import Couple from './InternElf';
+import Couple from './Couple';
 
 class CyborgElf extends Worker {
   constructor() {
