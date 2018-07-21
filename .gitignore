@@ -1,4 +1,36 @@
-.vscode
-.idea
+# Dependency directory
 node_modules/
+
+# Distribution directory
 dist/
+
+# Logs
+logs
+*.log
+
+# IDEA
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# Window
+Thumbs.db
+Desktop.ini
+
+# MAC
+.DS_Store
+
+# etc
+*.swp
+etc
+temp
+api
+doc
+report
+karma.conf.local.js
+.tern-project
+.tern-port
+*.vim
+.\#*
