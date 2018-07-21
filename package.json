@@ -21,12 +21,12 @@
   "homepage": "https://github.com/ParkSB/santa-inc#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.4",
+    "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
-    "copy-webpack-plugin": "^4.5.1",
+    "copy-webpack-plugin": "^4.5.2",
     "eslint": "^5.1.0",
     "eslint-config-airbnb-base": "^13.0.0",
-    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-import": "^2.13.0",
     "jasmine-core": "^3.1.0",
     "jasmine-expect": "^3.8.3",
     "karma": "^2.0.4",
@@ -34,11 +34,12 @@
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-matchers": "^3.8.3",
     "karma-webpack": "^3.0.0",
-    "uglifyjs-webpack-plugin": "^1.2.3",
+    "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
+    "hoek": "^4.2.1",
     "jquery": "^3.3.1"
   }
 }
