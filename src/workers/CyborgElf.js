@@ -7,7 +7,7 @@ class CyborgElf extends Worker {
 
     this.minOutput = 6;
     this.maxOutput = 12;
-    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+    this.output = this.initializeOutput();
 
     this.name = 'cyborgElf';
     this.korName = '사이보그 요정';

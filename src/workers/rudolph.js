@@ -7,7 +7,7 @@ class Rudolph extends Worker {
 
     this.minOutput = 1;
     this.maxOutput = 2;
-    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+    this.output = this.initializeOutput();
 
     this.name = 'rudolph';
     this.korName = '루돌프';

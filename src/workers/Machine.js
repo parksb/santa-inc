@@ -7,7 +7,7 @@ class Machine extends Worker {
 
     this.minOutput = 4;
     this.maxOutput = 10;
-    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+    this.output = this.initializeOutput();
 
     this.name = 'machine';
     this.korName = '선물 기계';

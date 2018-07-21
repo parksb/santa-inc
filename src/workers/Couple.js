@@ -6,7 +6,7 @@ class Couple extends Worker {
 
     this.minOutput = 9;
     this.maxOutput = 15;
-    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+    this.output = this.initializeOutput();
 
     this.name = 'couple';
     this.korName = '커플';

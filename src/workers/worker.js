@@ -2,7 +2,7 @@ class Worker {
   constructor() {
     this.minOutput = 0;
     this.maxOutput = 0;
-    this.output = 0;
+    this.output = this.initializeOutput();
 
     this.name = '';
     this.korName = '';
@@ -41,6 +41,10 @@ class Worker {
 
   getOutput() {
     return this.output;
+  }
+
+  initializeOutput() {
+    return Math.floor((Math.random() * (this.maxOutput - this.minOutput + 1))) + this.minOutput;
   }
 
   next() { }
