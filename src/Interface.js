@@ -26,7 +26,7 @@ class Interface {
       couple: Couple,
     };
 
-    Rudolph.cost = 20;
+    Rudolph.cost = 1;
     InternElf.cost = 50;
     RegularElf.cost = 100;
     Machine.cost = 300;
@@ -55,7 +55,7 @@ class Interface {
         `<p>${worker.getKorName()}` +
           '<img class="item-present-img" src="/assets/present.png">' +
           `<span class="t">${workerName.getCost()}</span>` +
-          `<br/><span class="pr">${worker.getAddi()} ~ ${worker.getOutput()}개 생산</span>` +
+          `<br/><span class="pr">${worker.getMinOutput()} ~ ${worker.getMaxOutput()}개 생산</span>` +
         '</p>' +
       '</li>');
 

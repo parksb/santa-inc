@@ -5,11 +5,14 @@ class Rudolph extends Worker {
   constructor() {
     super();
 
-    this.addi = 1;
-    this.output = 2;
-    this.img = '/assets/dolf.gif';
+    this.minOutput = 1;
+    this.maxOutput = 2;
+    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+
     this.name = 'rudolph';
     this.korName = '루돌프';
+
+    this.img = '/assets/dolf.gif';
   }
 
   next() {

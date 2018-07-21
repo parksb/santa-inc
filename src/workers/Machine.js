@@ -5,11 +5,14 @@ class Machine extends Worker {
   constructor() {
     super();
 
-    this.addi = 4;
-    this.output = 10;
-    this.img = '/assets/machine.gif';
+    this.minOutput = 4;
+    this.maxOutput = 10;
+    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+
     this.name = 'machine';
     this.korName = '선물 기계';
+
+    this.img = '/assets/machine.gif';
   }
 
   next() {

@@ -5,11 +5,14 @@ class CyborgElf extends Worker {
   constructor() {
     super();
 
-    this.addi = 6;
-    this.output = 12;
-    this.img = '/assets/cyborg.png';
+    this.minOutput = 6;
+    this.maxOutput = 12;
+    this.output = Math.floor((Math.random() * this.maxOutput) + this.minOutput);
+
     this.name = 'cyborgElf';
     this.korName = '사이보그 요정';
+
+    this.img = '/assets/cyborg.png';
   }
 
   next() {
