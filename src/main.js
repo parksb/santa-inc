@@ -19,7 +19,7 @@ $(document).ready(() => {
   userInterface.attachEvent(game);
 
   setInterval(() => {
-    const workers = userInterface.getWorkers();
+    const workers = userInterface.getWorkerList();
     const workerName = currentWorkerLevel.getName();
 
     if (game.getTotalPresent() >= workers[workerName].getCost()) {
