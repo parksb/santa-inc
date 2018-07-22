@@ -4,7 +4,7 @@
   "description": "That's right. We have to code for Christmas.",
   "main": "main.js",
   "scripts": {
-    "test": "karma start",
+    "test": "karma start --browsers FirefoxDeveloper",
     "build": "webpack --progress -p",
     "watch": "webpack --progress --watch",
     "server": "webpack-dev-server --open",
@@ -31,11 +31,13 @@
     "jasmine-expect": "^3.8.3",
     "karma": "^2.0.4",
     "karma-chrome-launcher": "^2.2.0",
+    "karma-firefox-launcher": "^1.1.0",
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-matchers": "^3.8.3",
     "karma-webpack": "^3.0.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.16.1",
+    "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
