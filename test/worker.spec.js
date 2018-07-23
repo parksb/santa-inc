@@ -33,3 +33,14 @@ describe('getOutput()', () => {
     expect(couple.getOutput()).toBeWithinRange(9, 15);
   }); 
 });
+
+describe('next()', () => {
+  it('should returns a next level worker', () => {
+    expect(rudolph.next().constructor.name).toBe('InternElf');
+    expect(internElf.next().constructor.name).toBe('RegularElf');
+    expect(regularElf.next().constructor.name).toBe('Machine');
+    expect(machine.next().constructor.name).toBe('CyborgElf');
+    expect(cyborgElf.next().constructor.name).toBe('Couple');
+    expect(couple.next()).toBe(null);
+  }); 
+});
