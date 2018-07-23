@@ -1,29 +1,32 @@
 import $ from 'jquery';
-import Interface from './Interface';
+import CommonInterface from './interfaces/CommonInterface';
+import WorkerInterface from './interfaces/WorkerInterface';
+import PolicyInterface from './interfaces/PolicyInterface';
 import Game from './Game';
 import Rudolph from './workers/Rudolph';
 
-const userInterface = new Interface();
-const game = new Game();
-
-let currentWorkerLevel = new Rudolph();
-
-function attachEvent() {
-  $('#present-img').click(() => {
-    game.updateTotalPresent(game.getClickPresent());
-  });
-} // attachEvent
-
 $(document).ready(() => {
+  const game = new Game();
+  const commonInterface = new CommonInterface();
+  const workerInterface = new WorkerInterface(game);
+  const policyInterface = new PolicyInterface();
+
+  let currentWorkerLevel = new Rudolph();
+
+  const attachEvent = () => {
+    $('#present-img').click(() => {
+      game.updateTotalPresent(game.getClickPresent());
+    });
+  }; // attachEvent
+
   attachEvent();
-  userInterface.attachEvent(game);
 
   setInterval(() => {
-    const workers = userInterface.getWorkerList();
+    const workers = workerInterface.getWorkerList();
     const workerName = currentWorkerLevel.getName();
 
     if (game.getTotalPresent() >= workers[workerName].getCost()) {
-      userInterface.drawWorkerList(currentWorkerLevel);
+      workerInterface.drawWorkerList(currentWorkerLevel);
       currentWorkerLevel = currentWorkerLevel.next();
     }
 

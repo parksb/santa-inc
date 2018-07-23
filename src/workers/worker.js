@@ -47,7 +47,9 @@ class Worker {
     return Math.floor((Math.random() * (this.maxOutput - this.minOutput + 1))) + this.minOutput;
   }
 
-  next() { }
+  next() {
+    throw new Error('next() must be implemented.');
+  }
 }
 
 export default Worker;
