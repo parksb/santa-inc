@@ -21,8 +21,10 @@
   "homepage": "https://github.com/ParkSB/santa-inc#readme",
   "devDependencies": {
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-3": "^6.24.1",
     "copy-webpack-plugin": "^4.5.2",
     "eslint": "^5.1.0",
     "eslint-config-airbnb-base": "^13.0.0",
