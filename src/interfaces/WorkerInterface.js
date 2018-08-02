@@ -26,14 +26,6 @@ class WorkerInterface {
       couple: Couple,
     };
 
-    // 노동자 cost를 static하게 선언
-    Rudolph.cost = 1;
-    InternElf.cost = 50;
-    RegularElf.cost = 100;
-    Machine.cost = 300;
-    CyborgElf.cost = 1000;
-    Couple.cost = 2000;
-
     this.attachEvent(game);
   }
 

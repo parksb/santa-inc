@@ -1,4 +1,6 @@
 class Worker {
+  static cost = 0;
+
   constructor() {
     this.minOutput = 0;
     this.maxOutput = 0;

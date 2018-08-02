@@ -1,6 +1,8 @@
 import Worker from './Worker';
 
 class Couple extends Worker {
+  static cost = 2000;
+
   constructor() {
     super();
 

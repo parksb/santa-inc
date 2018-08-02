@@ -2,6 +2,8 @@ import Worker from './Worker';
 import Couple from './Couple';
 
 class CyborgElf extends Worker {
+  static cost = 1000;
+
   constructor() {
     super();
 

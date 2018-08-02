@@ -2,6 +2,8 @@ import Worker from './Worker';
 import Machine from './Machine';
 
 class RegularElf extends Worker {
+  static cost = 100;
+
   constructor() {
     super();
 
