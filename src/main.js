@@ -6,16 +6,15 @@ import Game from './Game';
 import Rudolph from './workers/Rudolph';
 
 $(document).ready(() => {
-  const game = new Game();
   const commonInterface = new CommonInterface();
-  const workerInterface = new WorkerInterface(game);
-  const policyInterface = new PolicyInterface();
+  const workerInterface = new WorkerInterface(Game);
+  const policyInterface = new PolicyInterface(Game);
 
   let currentWorkerLevel = new Rudolph();
 
   const attachEvent = () => {
     $('#present-img').click(() => {
-      game.updateTotalPresent(game.getClickPresent());
+      Game.updateTotalPresent(Game.getClickPresent());
     });
   }; // attachEvent
 
@@ -25,12 +24,12 @@ $(document).ready(() => {
     const workers = workerInterface.getWorkerList();
     const workerName = currentWorkerLevel.getName();
 
-    if (game.getTotalPresent() >= workers[workerName].getCost()) {
+    if (Game.getTotalPresent() >= workers[workerName].getCost()) {
       workerInterface.drawWorkerList(currentWorkerLevel);
       currentWorkerLevel = currentWorkerLevel.next();
     }
 
-    game.updateTotalPresent(game.getTotalOutput());
-    $('#present-info').text(`1초당 ${game.getTotalOutput()}개 생산중!`);
+    Game.updateTotalPresent(Game.getTotalOutput());
+    $('#present-info').text(`1초당 ${Game.getTotalOutput()}개 생산중!`);
   }, 1000);
 });

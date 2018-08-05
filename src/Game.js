@@ -1,38 +1,43 @@
 import $ from 'jquery';
 
 class Game {
-  constructor() {
-    this.hiredWorkers = [];
-    this.totalPresent = 0;
-    this.totalOutput = 0;
-    this.clickPresent = 1;
-  }
+  static totalPresent = 0;
 
-  getHiredWorkers() {
+  static totalOutput = 0;
+
+  static clickPresent = 1;
+
+  static hiredWorkers = [];
+
+  static getHiredWorkers() {
     return this.hiredWorkers;
   }
 
-  getTotalPresent() {
+  static getTotalPresent() {
     return this.totalPresent;
   }
 
-  getTotalOutput() {
+  static getTotalOutput() {
     return this.totalOutput;
   }
 
-  getClickPresent() {
+  static getClickPresent() {
     return this.clickPresent;
   }
 
-  addWorker(worker) {
+  static addWorker(worker) {
     this.hiredWorkers.push(worker);
   }
 
-  addTotalOutput(val) {
+  static setClickPresent(val) {
+    this.clickPresent = val;
+  }
+
+  static addTotalOutput(val) {
     this.totalOutput += val;
   }
 
-  updateTotalPresent(val) {
+  static updateTotalPresent(val) {
     this.totalPresent += val;
     $('#present-num').text(this.totalPresent.toFixed(0));
   }
