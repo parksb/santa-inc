@@ -12,6 +12,13 @@ const machine = new Machine();
 const cyborgElf = new CyborgElf();
 const couple = new Couple();
 
+rudolph.initializeOutput(Rudolph.getMinOutput(), Rudolph.getMaxOutput());
+internElf.initializeOutput(InternElf.getMinOutput(), InternElf.getMaxOutput());
+regularElf.initializeOutput(RegularElf.getMinOutput(), RegularElf.getMaxOutput());
+machine.initializeOutput(Machine.getMinOutput(), Machine.getMaxOutput());
+cyborgElf.initializeOutput(CyborgElf.getMinOutput(), CyborgElf.getMaxOutput());
+couple.initializeOutput(Couple.getMinOutput(), Couple.getMaxOutput());
+
 describe('getName()', () => {
   it('should returns the name of the worker', () => {
     expect(rudolph.getName()).toBe('rudolph');
@@ -42,5 +49,30 @@ describe('next()', () => {
     expect(machine.next().constructor.name).toBe('CyborgElf');
     expect(cyborgElf.next().constructor.name).toBe('Couple');
     expect(couple.next()).toBe(null);
+  }); 
+});
+
+describe('addMaxOutput(val)', () => {
+  it('should add val to worker\'s output', () => {
+    const rudolphMaxOutput = Rudolph.getMaxOutput();
+    const internElfMaxOutput = InternElf.getMaxOutput();
+    const regularElfMaxOutput = RegularElf.getMaxOutput();
+    const machineMaxOutput = Machine.getMaxOutput();
+    const cyborgElfMaxOutput = CyborgElf.getMaxOutput();
+    const coupleMaxOutput = Couple.getMaxOutput();
+
+    Rudolph.addMaxOutput(1);
+    InternElf.addMaxOutput(1);
+    RegularElf.addMaxOutput(1);
+    Machine.addMaxOutput(1);
+    CyborgElf.addMaxOutput(1);
+    Couple.addMaxOutput(1);
+
+    expect(Rudolph.getMaxOutput()).toBe(rudolphMaxOutput + 1);
+    expect(InternElf.getMaxOutput()).toBe(internElfMaxOutput + 1);
+    expect(RegularElf.getMaxOutput()).toBe(regularElfMaxOutput + 1);
+    expect(Machine.getMaxOutput()).toBe(machineMaxOutput + 1);
+    expect(CyborgElf.getMaxOutput()).toBe(cyborgElfMaxOutput + 1);
+    expect(Couple.getMaxOutput()).toBe(coupleMaxOutput + 1);
   }); 
 });
