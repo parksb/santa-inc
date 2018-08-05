@@ -9,8 +9,16 @@ class Policy {
     this.spec = '';
   }
 
-  getCost() {
+  static getCost() {
     return this.cost;
+  }
+
+  static next() {
+    return null;
+  }
+
+  static execute() {
+    throw new Error('execute() must be implemented.');
   }
 
   getName() {
@@ -27,14 +35,6 @@ class Policy {
 
   getSpec() {
     return this.spec;
-  }
-
-  next() {
-    return null;
-  }
-
-  execute() {
-    throw new Error('execute() must be implemented.');
   }
 }
 
