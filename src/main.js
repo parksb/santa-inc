@@ -4,6 +4,7 @@ import WorkerInterface from './interfaces/WorkerInterface';
 import PolicyInterface from './interfaces/PolicyInterface';
 import Game from './Game';
 import Rudolph from './workers/Rudolph';
+import RibbonPractice from './policies/RibbonPractice';
 
 $(document).ready(() => {
   const commonInterface = new CommonInterface();
@@ -19,6 +20,7 @@ $(document).ready(() => {
   }; // attachEvent
 
   attachEvent();
+  policyInterface.drawPolicyList(new RibbonPractice());
 
   setInterval(() => {
     const workers = workerInterface.getWorkerList();
