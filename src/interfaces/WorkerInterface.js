@@ -51,7 +51,7 @@ class WorkerInterface {
       `<p>${worker.getKorName()}` +
       '<img class="item-present-img" src="/assets/present.png">' +
       `<span class="t">${workerName.getCost()}</span>` +
-      `<br/><span class="pr">${worker.getMinOutput()} ~ ${worker.getMaxOutput()}개 생산</span>` +
+      `<br/><span class="pr">${workerName.getMinOutput()} ~ ${workerName.getMaxOutput()}개 생산</span>` +
       '</p>' +
       '</li>'
     );
@@ -73,10 +73,16 @@ class WorkerInterface {
     // 노동자 고용
     $(this.elements.workerList).delegate('li', 'click', (e) => {
       const { id } = e.currentTarget;
-      const worker = new this.workerList[id]();
 
       // 선물이 충분할 경우
       if (game.getTotalPresent() >= this.workerList[id].getCost()) {
+        const worker = new this.workerList[id]();
+
+        worker.initializeOutput(
+          this.workerList[id].getMinOutput(),
+          this.workerList[id].getMaxOutput()
+        );
+
         game.addWorker(worker);
         game.addTotalOutput(worker.getOutput());
         game.updateTotalPresent(-1 * this.workerList[id].getCost());

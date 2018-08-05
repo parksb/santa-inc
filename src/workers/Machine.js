@@ -4,12 +4,12 @@ import CyborgElf from './CyborgElf';
 class Machine extends Worker {
   static cost = 300;
 
+  static minOutput = 4;
+
+  static maxOutput = 10;
+
   constructor() {
     super();
-
-    this.minOutput = 4;
-    this.maxOutput = 10;
-    this.output = this.initializeOutput();
 
     this.name = 'machine';
     this.korName = '선물 기계';

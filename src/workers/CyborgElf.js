@@ -4,12 +4,12 @@ import Couple from './Couple';
 class CyborgElf extends Worker {
   static cost = 1000;
 
+  static minOutput = 6;
+
+  static maxOutput = 12;
+
   constructor() {
     super();
-
-    this.minOutput = 6;
-    this.maxOutput = 12;
-    this.output = this.initializeOutput();
 
     this.name = 'cyborgElf';
     this.korName = '사이보그 요정';

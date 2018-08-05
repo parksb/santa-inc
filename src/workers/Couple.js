@@ -3,12 +3,12 @@ import Worker from './Worker';
 class Couple extends Worker {
   static cost = 2000;
 
+  static minOutput = 9;
+
+  static maxOutput = 15;
+
   constructor() {
     super();
-
-    this.minOutput = 9;
-    this.maxOutput = 15;
-    this.output = this.initializeOutput();
 
     this.name = 'couple';
     this.korName = '커플';

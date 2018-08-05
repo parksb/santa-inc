@@ -4,12 +4,12 @@ import Machine from './Machine';
 class RegularElf extends Worker {
   static cost = 100;
 
+  static minOutput = 2;
+
+  static maxOutput = 7;
+
   constructor() {
     super();
-
-    this.minOutput = 2;
-    this.maxOutput = 7;
-    this.output = this.initializeOutput();
 
     this.name = 'regularElf';
     this.korName = '정규직 요정';

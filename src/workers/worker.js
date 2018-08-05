@@ -1,10 +1,12 @@
 class Worker {
   static cost = 0;
 
+  static minOutput = 0;
+
+  static maxOutput = 0;
+
   constructor() {
-    this.minOutput = 0;
-    this.maxOutput = 0;
-    this.output = this.initializeOutput();
+    this.output = 0;
 
     this.name = '';
     this.korName = '';
@@ -21,6 +23,18 @@ class Worker {
     this.cost += Math.floor(this.cost / costRatio);
   }
 
+  static getMinOutput() {
+    return this.minOutput;
+  }
+
+  static getMaxOutput() {
+    return this.maxOutput;
+  }
+
+  static addMaxOutput(val) {
+    this.maxOutput += val;
+  }
+
   getName() {
     return this.name;
   }
@@ -33,20 +47,12 @@ class Worker {
     return this.korName;
   }
 
-  getMinOutput() {
-    return this.minOutput;
-  }
-
-  getMaxOutput() {
-    return this.maxOutput;
-  }
-
   getOutput() {
     return this.output;
   }
 
-  initializeOutput() {
-    return Math.floor((Math.random() * (this.maxOutput - this.minOutput + 1))) + this.minOutput;
+  initializeOutput(min, max) {
+    this.output = Math.floor((Math.random() * (max - min + 1))) + min;
   }
 
   next() {
