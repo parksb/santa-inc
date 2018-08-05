@@ -1,7 +1,7 @@
 class Policy {
-  constructor() {
-    this.cost = 0;
+  static cost = 0;
 
+  constructor() {
     this.name = '';
     this.korName = '';
 
@@ -30,7 +30,7 @@ class Policy {
   }
 
   next() {
-    throw new Error('next() must be implemented.');
+    return null;
   }
 
   execute() {

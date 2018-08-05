@@ -1,6 +1,21 @@
 import $ from 'jquery';
+import RibbonPractice from '../policies/RibbonPractice';
+import SmartWork from '../policies/SmartWork';
+import NightOver from '../policies/NightOver';
 
 class PolicyInterface {
+  constructor() {
+    this.elements = {
+      policyList: '#policy-list'
+    };
+
+    this.policyList = {
+      ribbonPractice: RibbonPractice,
+      smartWork: SmartWork,
+      nightOver: NightOver,
+    };
+  }
+
   drawPolicyList(policy) {
     $(this.elements.policyList).append(
       '<li>' +
