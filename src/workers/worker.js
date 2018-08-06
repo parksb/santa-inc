@@ -35,6 +35,10 @@ class Worker {
     this.maxOutput += val;
   }
 
+  static addMinOutput(val) {
+    this.minOutput += val;
+  }
+
   getName() {
     return this.name;
   }
@@ -49,6 +53,10 @@ class Worker {
 
   getOutput() {
     return this.output;
+  }
+
+  setOutput(val) {
+    this.output = val;
   }
 
   initializeOutput(min, max) {
