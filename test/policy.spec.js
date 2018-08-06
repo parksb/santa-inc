@@ -11,7 +11,7 @@ describe('Click present with ribbon practice', () => {
 });
 
 describe('Click present with smart work', () => {
-  it('should be 1.2', () => {
+  it('should be 1.5', () => {
     SmartWork.execute();
     expect(Game.getClickPresent()).toBe(1.5);
   });
