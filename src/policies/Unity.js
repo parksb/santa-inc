@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import Game from '../Game';
 import Policy from './Policy';
 import RegularElf from '../workers/RegularElf';
