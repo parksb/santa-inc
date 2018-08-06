@@ -2,9 +2,11 @@
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/ParkSB/santa-inc.svg)](https://greenkeeper.io/)
 
+> **_세계를 선도하는 글로벌 기업 (주)산타_**
+
 그렇습니다. 크리스마스에는 역시 코딩이죠. 
  
-## [PLAY (Web)](https://harooo.com/oddgame/santa/)
+# [PLAY (Web)](https://harooo.com/oddgame/santa/)
 
 ![Santa Inc.](https://harooo.com/oddgame/img/santa.png)
 
