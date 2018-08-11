@@ -13,7 +13,7 @@ class Couple extends Worker {
     this.name = 'couple';
     this.korName = '커플';
 
-    this.img = '/assets/couple.gif';
+    this.img = '/assets/couple.png';
   }
 
   next() {
