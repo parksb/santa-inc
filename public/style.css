@@ -22,11 +22,16 @@ body {
     overflow-y: hidden;
 }
 
-.top-icon {
-    width: 20px;
+#top-icon-container {
     padding: 10px;
+}
+
+.top-icon {
+    margin-left: 12px;
+    color: #F3AC00;
     float: right;
     cursor: pointer;
+    font-size: 18px;
 }
 
 #play-ground {
@@ -96,7 +101,7 @@ body {
     color: #F3AC00;
 }
 
-.pr {
+.pr, .lv {
     font-weight: normal;
 }
 
@@ -150,8 +155,8 @@ body {
     width: 100%;
     margin-top: 3px;
     background-color: #3F3F3F;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     cursor: pointer;
 }
 
@@ -165,14 +170,18 @@ body {
     margin-left: 20px;
 }
 
-#item-list li p, #manage-list li p {
+#item-list li p, #personnel-list li p {
     color: white;
     font-size: 12pt;
     font-weight: bold;
     float: right;
     text-align: right;
     margin-right: 30px;
-    margin-top: 10px;
+    margin-top: 3px;
+}
+
+#personnel-list .output {
+    font-weight: normal;
 }
 
 #policy-list li {
