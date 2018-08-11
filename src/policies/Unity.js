@@ -20,7 +20,7 @@ class Unity extends Policy {
     const workers = Game.getHiredWorkers();
 
     workers.forEach((worker) => {
-      if (worker.getName() instanceof RegularElf) {
+      if (worker instanceof RegularElf) {
         worker.setOutput(worker.getOutput() + 1);
         PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
         Game.addTotalOutput(1);
