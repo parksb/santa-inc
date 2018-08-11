@@ -11,7 +11,7 @@ class Limitless extends Policy {
     this.name = 'limitless';
     this.korName = '무기계약';
 
-    this.description = '이거 정규직이랑 같은 거예요.';
+    this.description = '평생 계약직으로 일할 수 있습니다.';
     this.spec = '인턴 요정 최소 생산 +1';
   }
 

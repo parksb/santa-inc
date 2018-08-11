@@ -4,6 +4,18 @@ import SmartWork from '../policies/SmartWork';
 import NightOver from '../policies/NightOver';
 import PassionPay from '../policies/PassionPay';
 import Multitasking from '../policies/Multitasking';
+import Supervisor from '../policies/Supervisor';
+import Limitless from '../policies/Limitless';
+import Unity from '../policies/Unity';
+import Subcontract from '../policies/Subcontract';
+import CompanyLover from '../policies/CompanyLover';
+import DressCode from '../policies/DressCode';
+import ExtendTempWorker from '../policies/ExtendTempWorker';
+import ForcedPresent from '../policies/ForcedPresent';
+import ForcedStock from '../policies/ForcedStock';
+import Idea from '../policies/Idea';
+import SongForSanta from '../policies/SongForSanta';
+import TopDown from '../policies/TopDown';
 
 class PolicyInterface {
   constructor(game) {
@@ -16,7 +28,19 @@ class PolicyInterface {
       smartWork: SmartWork,
       nightOver: NightOver,
       passionPay: PassionPay,
-      multitasking: Multitasking
+      multitasking: Multitasking,
+      supervisor: Supervisor,
+      limitless: Limitless,
+      unity: Unity,
+      subcontract: Subcontract,
+      companyLover: CompanyLover,
+      dressCode: DressCode,
+      extendTempWorker: ExtendTempWorker,
+      forcedPresent: ForcedPresent,
+      forcedStock: ForcedStock,
+      idea: Idea,
+      songForSanta: SongForSanta,
+      topDown: TopDown
     };
 
     this.attachEvent(game);

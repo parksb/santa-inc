@@ -11,7 +11,7 @@ class Supervisor extends Policy {
     this.korName = '감독관 배치';
 
     this.description = '거기 루돌프12, 똑바로 안하지?';
-    this.spec = '모든 노동자 생산 +1';
+    this.spec = '모든 직원 생산 +1';
   }
 
   static execute() {
