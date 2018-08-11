@@ -1,4 +1,5 @@
 import Game from '../Game';
+import PersonnelInterface from '../interfaces/PersonnelInterface';
 import Policy from './Policy';
 import SongForSanta from './SongForSanta';
 import ForcedPresent from './ForcedPresent';
@@ -21,7 +22,9 @@ class TopDown extends Policy {
     const workers = Game.getHiredWorkers();
 
     workers.forEach((worker) => {
-      worker.setOutput(worker.getOutput() + 1);
+      worker.setOutput(worker.getOutput() + 2);
+      PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+      Game.addTotalOutput(2);
     });
   }
 

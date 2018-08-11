@@ -1,4 +1,5 @@
 import Game from '../Game';
+import PersonnelInterface from '../interfaces/PersonnelInterface';
 import Policy from './Policy';
 import RegularElf from '../workers/RegularElf';
 
@@ -21,6 +22,8 @@ class ExtendTempWorker extends Policy {
     workers.forEach((worker) => {
       if (worker instanceof RegularElf) {
         worker.setOutput(worker.getOutput() + 2);
+        PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+        Game.addTotalOutput(2);
       }
     });
   }

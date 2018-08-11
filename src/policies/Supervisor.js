@@ -1,5 +1,6 @@
 import Policy from './Policy';
 import Game from '../Game';
+import PersonnelInterface from '../interfaces/PersonnelInterface';
 import TopDown from './TopDown';
 
 class Supervisor extends Policy {
@@ -20,6 +21,8 @@ class Supervisor extends Policy {
 
     workers.forEach((worker) => {
       worker.setOutput(worker.getOutput() + 1);
+      PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+      Game.addTotalOutput(1);
     });
   }
 

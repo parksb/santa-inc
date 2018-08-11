@@ -7,6 +7,8 @@ class Worker {
 
   constructor() {
     this.output = 0;
+    this.level = 1;
+    this.levelCost = 0;
 
     this.name = '';
     this.korName = '';
@@ -55,12 +57,41 @@ class Worker {
     return this.output;
   }
 
+  getLevel() {
+    return this.level;
+  }
+
+  getLevelCost() {
+    return this.levelCost;
+  }
+
   setOutput(val) {
     this.output = val;
   }
 
+  setName(name) {
+    this.name = name;
+  }
+
+  setKorName(korName) {
+    this.korName = korName;
+  }
+
+  setLevelCost(val) {
+    this.levelCost = val;
+  }
+
   initializeOutput(min, max) {
     this.output = Math.floor((Math.random() * (max - min + 1))) + min;
+  }
+
+  increaseLevel() {
+    const levelCostRatio = 3;
+    const outputRatio = 10;
+
+    this.level += 1;
+    this.levelCost += Math.floor(this.levelCost / levelCostRatio);
+    this.output += Math.ceil(this.output / outputRatio);
   }
 
   next() {

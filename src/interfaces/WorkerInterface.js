@@ -1,4 +1,6 @@
 import $ from 'jquery';
+import Game from '../Game';
+import PersonnelInterface from './PersonnelInterface';
 import Rudolph from '../workers/Rudolph';
 import InternElf from '../workers/InternElf';
 import RegularElf from '../workers/RegularElf';
@@ -25,6 +27,8 @@ class WorkerInterface {
       cyborgElf: CyborgElf,
       couple: Couple,
     };
+
+    this.personnelInterface = new PersonnelInterface(Game);
 
     this.attachEvent(game);
   }
@@ -85,6 +89,10 @@ class WorkerInterface {
           this.workerList[id].getMinOutput(),
           this.workerList[id].getMaxOutput()
         );
+        worker.setLevelCost(this.workerList[id].getCost());
+
+        worker.setName(worker.getName() + Game.getHiredWorkers().length);
+        worker.setKorName(worker.getKorName() + Game.getHiredWorkers().length);
 
         game.addWorker(worker);
         game.addTotalOutput(worker.getOutput());
@@ -92,6 +100,8 @@ class WorkerInterface {
 
         this.workerList[id].increaseCost();
         $(`#${id} .t`).text(this.workerList[id].getCost());
+
+        this.personnelInterface.drawPersonnelList(worker);
       }
     });
   } // attachHireEvent
