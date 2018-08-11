@@ -44,7 +44,6 @@
     "webpack-dev-server": "^3.1.4"
   },
   "dependencies": {
-    "hoek": "^5.0.4",
     "jquery": "^3.3.1"
   }
 }
