@@ -24,11 +24,14 @@ $(document).ready(() => {
 
   setInterval(() => {
     const workers = workerInterface.getWorkerList();
-    const workerName = currentWorkerLevel.getName();
 
-    if (Game.getTotalPresent() >= workers[workerName].getCost()) {
-      workerInterface.drawWorkerList(currentWorkerLevel);
-      currentWorkerLevel = currentWorkerLevel.next();
+    if (currentWorkerLevel) {
+      const workerName = currentWorkerLevel.getName();
+
+      if (Game.getTotalPresent() >= workers[workerName].getCost()) {
+        workerInterface.drawWorkerList(currentWorkerLevel);
+        currentWorkerLevel = currentWorkerLevel.next();
+      }
     }
 
     Game.updateTotalPresent(Game.getTotalOutput());

@@ -40,7 +40,6 @@ class WorkerInterface {
   drawWorkerList(worker) {
     const workerName = this.workerList[worker.getName()];
     const nextWorker = worker.next();
-    const nextWorkerName = this.workerList[nextWorker.getName()];
 
     $(this.elements.preview).remove(); // 다음 미리보기 노동자를 지운다.
 
@@ -56,17 +55,21 @@ class WorkerInterface {
       '</li>'
     );
 
-    // 다음 미리보기 노동자를 출력한다.
-    $(this.elements.workerList).append(
-      '<li class="preview">' +
-      `<img class="item-img preview-img" src="${nextWorker.getImg()}"/>` +
-      '<p>???' +
-      '<img class="item-present-img" src="/assets/present.png">' +
-      `<span class="t">${nextWorkerName.getCost()}</span>` +
-      '<br/><span class="pr">??? ~ ???개 생산</span>' +
-      '</p>' +
-      '</li>'
-    );
+    if (nextWorker) {
+      const nextWorkerName = this.workerList[nextWorker.getName()];
+
+      // 다음 미리보기 노동자를 출력한다.
+      $(this.elements.workerList).append(
+        '<li class="preview">' +
+        `<img class="item-img preview-img" src="${nextWorker.getImg()}"/>` +
+        '<p>???' +
+        '<img class="item-present-img" src="/assets/present.png">' +
+        `<span class="t">${nextWorkerName.getCost()}</span>` +
+        '<br/><span class="pr">??? ~ ???개 생산</span>' +
+        '</p>' +
+        '</li>'
+      );
+    }
   } // drawWorkerList
 
   attachEvent(game) {
