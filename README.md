@@ -8,7 +8,7 @@
  
 # [PLAY (Web)](https://harooo.com/oddgame/santa/)
 
-![Santa Inc.](https://harooo.com/oddgame/img/santa.png)
+![Santa Inc.](assets/meta/preview.png)
 
 Santa Inc.는 루돌프와 요정을 착취하는 clicker 게임입니다. 
 
