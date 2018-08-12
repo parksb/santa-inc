@@ -102,9 +102,14 @@ class WorkerInterface {
         $(`#${id} .t`).text(this.workerList[id].getCost());
 
         this.personnelInterface.drawPersonnelList(worker);
+        this.drawWorker(worker);
       }
     });
   } // attachHireEvent
+
+  drawWorker(worker) {
+    $('#play-ground').append(`<img src="${worker.getImg()}" />`);
+  }
 }
 
 export default WorkerInterface;
