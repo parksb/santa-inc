@@ -1,5 +1,6 @@
 import Policy from './Policy';
 import Game from '../Game';
+import DressCode from './DressCode';
 
 class Subcontract extends Policy {
   static cost = 800;
@@ -19,7 +20,7 @@ class Subcontract extends Policy {
   }
 
   static next() {
-    return [];
+    return [new DressCode()];
   }
 }
 
