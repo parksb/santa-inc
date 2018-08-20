@@ -14,7 +14,7 @@ class RegularElf extends Worker {
     this.name = 'regularElf';
     this.korName = '정규직 요정';
 
-    this.img = '/assets/elf2.gif';
+    this.img = '/assets/regularElf.gif';
   }
 
   next() {
