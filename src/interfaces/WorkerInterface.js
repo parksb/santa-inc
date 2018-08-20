@@ -109,7 +109,7 @@ class WorkerInterface {
 
   drawWorker(worker) {
     $('#play-ground').append(`<img src="${worker.getImg()}" />`);
-  }
+  } // drawWorker
 }
 
 export default WorkerInterface;
