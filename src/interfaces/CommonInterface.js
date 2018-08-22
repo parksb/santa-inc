@@ -1,36 +1,27 @@
 import $ from 'jquery';
+import Game from '../Game';
 
 class CommonInterface {
   constructor() {
-    this.attachEvent();
+    this.attachMenuEvent();
     this.attachCreditEvent();
     this.attachSoundEvent();
   }
 
-  attachEvent() {
-    // 메뉴를 클릭했을 때
+  attachMenuEvent() {
     $('#menu li').on('click', (e) => {
       const { id } = e.currentTarget;
+      const tab = {
+        hire: '#item-list',
+        policy: '#policy-list',
+        personnel: '#personnel-list'
+      };
 
-      // 모든 메뉴를 off하고 클릭한 메뉴를 on한다.
-      $('#hire').attr('class', 'm-off');
-      $('#policy').attr('class', 'm-off');
-      $('#personnel').attr('class', 'm-off');
-      $(`#${id}`).attr('class', 'm-on');
+      $('.m-list').removeClass('m-on').addClass('m-off');
+      $(`#${id}`).removeClass('m-off').addClass('m-on');
 
-      if (id === 'hire') { // 고용을 클릭하면
-        $('#item-list').attr('class', 'list on'); // 고용 리스트를 on한다.
-        $('#policy-list').attr('class', 'list off');
-        $('#personnel-list').attr('class', 'list off');
-      } else if (id === 'policy') { // 정책을 클릭하면
-        $('#item-list').attr('class', 'list off');
-        $('#policy-list').attr('class', 'list on'); // 정책 리스트를 on한다.
-        $('#personnel-list').attr('class', 'list off');
-      } else { // 인사를 클릭하면
-        $('#item-list').attr('class', 'list off');
-        $('#policy-list').attr('class', 'list off');
-        $('#personnel-list').attr('class', 'list on'); // 인사 리스트를 on한다.
-      }
+      $('.list').removeClass('on').addClass('off');
+      $(`${tab[id]}`).removeClass('off').addClass('on');
     });
   } // attachMenuEvent
 
@@ -44,7 +35,7 @@ class CommonInterface {
 
       window.open('credit.html', '', sOption);
     });
-  }
+  } // attachCreditEvent
 
   attachSoundEvent() {
     const audio = new Audio('/assets/audios/RudolphBeingExploited.wav');
@@ -65,7 +56,16 @@ class CommonInterface {
         flag = true;
       }
     });
-  }
+  } // attachSoundEvent
+
+  static refreshPlayGround() {
+    const workers = Game.getHiredWorkers();
+
+    $('#play-ground').html('');
+    workers.forEach((worker) => {
+      $('#play-ground').append(`<img src="${worker.getImg()}" />`);
+    });
+  } // refreshPlayGround
 }
 
 export default CommonInterface;
