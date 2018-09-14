@@ -38,7 +38,7 @@
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-matchers": "^3.8.3",
     "karma-webpack": "^3.0.0",
-    "uglifyjs-webpack-plugin": "^1.2.7",
+    "uglifyjs-webpack-plugin": "^2.0.0",
     "webpack": "^4.16.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.4"
