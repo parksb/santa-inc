@@ -1,6 +1,8 @@
 import $ from 'jquery';
+import Game from '../Game';
 import Policy from './Policy';
 import RegularElf from '../workers/RegularElf';
+import CommonInterface from '../interfaces/CommonInterface';
 
 class DressCode extends Policy {
   static cost = 1500;
@@ -16,8 +18,17 @@ class DressCode extends Policy {
   }
 
   static execute() {
+    const workers = Game.getHiredWorkers();
+
     RegularElf.addMinOutput(1);
     $('#regularElf .pr').text(`${RegularElf.getMinOutput()} ~ ${RegularElf.getMaxOutput()}개 생산`);
+
+    workers.forEach((worker) => {
+      if (worker instanceof RegularElf) {
+        worker.setImg('/assets/regularElfSuit.gif');
+        CommonInterface.refreshPlayGround();
+      }
+    });
   }
 
   static next() {
