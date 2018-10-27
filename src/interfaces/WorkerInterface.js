@@ -2,11 +2,12 @@ import $ from 'jquery';
 import Game from '../Game';
 import PersonnelInterface from './PersonnelInterface';
 import Rudolph from '../workers/Rudolph';
+import ParttimeElf from '../workers/ParttimeElf';
 import InternElf from '../workers/InternElf';
 import RegularElf from '../workers/RegularElf';
 import Machine from '../workers/Machine';
 import CyborgElf from '../workers/CyborgElf';
-import Couple from '../workers/Couple';
+import Tree from '../workers/Tree';
 
 class WorkerInterface {
   constructor(game) {
@@ -21,11 +22,12 @@ class WorkerInterface {
 
     this.workerList = {
       rudolph: Rudolph,
+      parttimeElf: ParttimeElf,
       internElf: InternElf,
       regularElf: RegularElf,
       machine: Machine,
       cyborgElf: CyborgElf,
-      couple: Couple,
+      tree: Tree,
     };
 
     this.personnelInterface = new PersonnelInterface(Game);

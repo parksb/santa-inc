@@ -1,6 +1,6 @@
 import Worker from './Worker';
 
-class Couple extends Worker {
+class Tree extends Worker {
   static cost = 2000;
 
   static minOutput = 9;
@@ -10,10 +10,10 @@ class Couple extends Worker {
   constructor() {
     super();
 
-    this.name = 'couple';
-    this.korName = '커플';
+    this.name = 'tree';
+    this.korName = '트리';
 
-    this.img = '/assets/couple.png';
+    this.img = '/assets/tree.gif';
   }
 
   next() {
@@ -21,4 +21,4 @@ class Couple extends Worker {
   }
 }
 
-export default Couple;
+export default Tree;

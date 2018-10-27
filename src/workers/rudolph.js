@@ -1,5 +1,5 @@
 import Worker from './Worker';
-import InternElf from './InternElf';
+import ParttimeElf from './ParttimeElf';
 
 class Rudolph extends Worker {
   static cost = 1;
@@ -18,7 +18,7 @@ class Rudolph extends Worker {
   }
 
   next() {
-    return new InternElf();
+    return new ParttimeElf();
   }
 }
 

@@ -1,5 +1,5 @@
 import Worker from './Worker';
-import Couple from './Couple';
+import Tree from './Tree';
 
 class CyborgElf extends Worker {
   static cost = 1000;
@@ -14,11 +14,11 @@ class CyborgElf extends Worker {
     this.name = 'cyborgElf';
     this.korName = '사이보그 요정';
 
-    this.img = '/assets/cyborg.png';
+    this.img = '/assets/cyborg.gif';
   }
 
   next() {
-    return new Couple();
+    return new Tree();
   }
 }
 
