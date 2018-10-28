@@ -1,6 +1,7 @@
 import Game from '../Game';
 import Policy from './Policy';
 import NightOver from './NightOver';
+import SplitParttimeWage from './SplitParttimeWage';
 
 class SmartWork extends Policy {
   static cost = 100;
@@ -20,7 +21,7 @@ class SmartWork extends Policy {
   }
 
   static next() {
-    return [new NightOver()];
+    return [new NightOver(), new SplitParttimeWage()];
   }
 }
 

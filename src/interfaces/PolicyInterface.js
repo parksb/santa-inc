@@ -2,6 +2,7 @@ import $ from 'jquery';
 import RibbonPractice from '../policies/RibbonPractice';
 import SmartWork from '../policies/SmartWork';
 import NightOver from '../policies/NightOver';
+import SplitParttimeWage from '../policies/SplitParttimeWage';
 import PassionPay from '../policies/PassionPay';
 import Multitasking from '../policies/Multitasking';
 import Supervisor from '../policies/Supervisor';
@@ -27,6 +28,7 @@ class PolicyInterface {
       ribbonPractice: RibbonPractice,
       smartWork: SmartWork,
       nightOver: NightOver,
+      splitParttimeWage: SplitParttimeWage,
       passionPay: PassionPay,
       multitasking: Multitasking,
       supervisor: Supervisor,
