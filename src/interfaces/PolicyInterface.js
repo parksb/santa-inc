@@ -11,6 +11,7 @@ import Unity from '../policies/Unity';
 import Subcontract from '../policies/Subcontract';
 import CompanyLover from '../policies/CompanyLover';
 import DressCode from '../policies/DressCode';
+import Wd40 from '../policies/Wd40';
 import ExtendTempWorker from '../policies/ExtendTempWorker';
 import ForcedPresent from '../policies/ForcedPresent';
 import ForcedStock from '../policies/ForcedStock';
@@ -37,6 +38,7 @@ class PolicyInterface {
       subcontract: Subcontract,
       companyLover: CompanyLover,
       dressCode: DressCode,
+      wd40: Wd40,
       extendTempWorker: ExtendTempWorker,
       forcedPresent: ForcedPresent,
       forcedStock: ForcedStock,

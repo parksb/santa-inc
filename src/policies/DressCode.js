@@ -3,6 +3,7 @@ import Game from '../Game';
 import Policy from './Policy';
 import RegularElf from '../workers/RegularElf';
 import CommonInterface from '../interfaces/CommonInterface';
+import Wd40 from './Wd40';
 
 class DressCode extends Policy {
   static cost = 1500;
@@ -32,7 +33,7 @@ class DressCode extends Policy {
   }
 
   static next() {
-    return [];
+    return [new Wd40()];
   }
 }
 
