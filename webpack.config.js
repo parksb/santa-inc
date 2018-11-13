@@ -5,7 +5,7 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/main.js',
+  entry: './src/main.ts',
   output: {
     path: path.resolve(__dirname, './dist/src/'),
     filename: 'bundle.js'
@@ -18,6 +18,11 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
@@ -29,6 +34,9 @@ module.exports = {
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
   },
   plugins: [
     new CopyWebpackPlugin([{
