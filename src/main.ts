@@ -1,8 +1,8 @@
 import * as $ from 'jquery';
+import Game from './Game';
 import CommonInterface from './interfaces/CommonInterface';
 import WorkerInterface from './interfaces/WorkerInterface';
 import PolicyInterface from './interfaces/PolicyInterface';
-import Game from './Game';
 import Rudolph from './workers/Rudolph';
 import RibbonPractice from './policies/RibbonPractice';
 
@@ -13,13 +13,13 @@ $(document).ready(() => {
 
   let currentWorkerLevel: any = new Rudolph();
 
-  const attachEvent = () => {
-    $('#present-img').click(() => {
-      Game.updateTotalPresent(Game.getClickPresent());
-    });
-  }; // attachEvent
+  commonInterface.attachPresentEvent();
+  commonInterface.attachMenuEvent();
+  commonInterface.attachCreditEvent();
+  commonInterface.attachSoundEvent();
+  workerInterface.attachEvent();
+  policyInterface.attachEvent();
 
-  attachEvent();
   policyInterface.drawPolicyList(new RibbonPractice());
 
   setInterval(() => {

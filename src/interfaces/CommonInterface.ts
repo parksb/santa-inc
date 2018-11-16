@@ -3,11 +3,21 @@ import Game from '../Game';
 import Worker from '../workers/Worker';
 
 class CommonInterface {
+  private static instance: CommonInterface;
+
   constructor() {
-    this.attachMenuEvent();
-    this.attachCreditEvent();
-    this.attachSoundEvent();
+    if (CommonInterface.instance) {
+      return CommonInterface.instance;
+    }
+
+    CommonInterface.instance = this;
   }
+
+  attachPresentEvent(): void {
+    $('#present-img').click(() => {
+      Game.updateTotalPresent(Game.getClickPresent());
+    });
+  } // attachPresentEvent
 
   attachMenuEvent(): void {
     $('#menu li').on('click', (e: JQuery.Event) => {
@@ -59,7 +69,7 @@ class CommonInterface {
     });
   } // attachSoundEvent
 
-  static refreshPlayGround(): void {
+  refreshPlayGround(): void {
     const workers: Worker[] = Game.getHiredWorkers();
 
     $('#play-ground').html('');

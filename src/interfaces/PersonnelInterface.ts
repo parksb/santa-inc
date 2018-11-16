@@ -2,15 +2,21 @@ import * as $ from 'jquery';
 import Game from '../Game';
 import Worker from '../workers/Worker';
 
-class PolicyInterface {
-  elements: any;
+class PersonnelInterface {
+  private static instance: PersonnelInterface;
+
+  private elements: any;
 
   constructor() {
+    if (PersonnelInterface.instance) {
+      return PersonnelInterface.instance;
+    }
+
     this.elements = {
       personnelList: '#personnel-list'
     };
 
-    this.attachEvent();
+    PersonnelInterface.instance = this;
   }
 
   drawPersonnelList(worker: Worker): void {
@@ -51,9 +57,9 @@ class PolicyInterface {
     });
   } // attachHireEvent
 
-  static updateOutput(name: string, output: number): void {
+  updateOutput(name: string, output: number): void {
     $(`#${name} .output`).text(`${output}개 생산`);
   } // updateOutput
 }
 
-export default PolicyInterface;
+export default PersonnelInterface;

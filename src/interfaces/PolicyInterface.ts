@@ -22,10 +22,16 @@ import SongForSanta from '../policies/SongForSanta';
 import TopDown from '../policies/TopDown';
 
 class PolicyInterface {
-  elements: any;
-  policyList: any;
+  private static instance: PolicyInterface;
+
+  private elements: any;
+  private policyList: any;
 
   constructor() {
+    if (PolicyInterface.instance) {
+      return PolicyInterface.instance;
+    }
+
     this.elements = {
       policyList: '#policy-list'
     };
@@ -52,7 +58,7 @@ class PolicyInterface {
       topDown: TopDown
     };
 
-    this.attachEvent();
+    PolicyInterface.instance = this;
   }
 
   drawPolicyList(policy: Policy): void {

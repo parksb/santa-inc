@@ -18,12 +18,13 @@ class Wd40 extends Policy {
   }
 
   execute(): void {
+    const personnelInterface: PersonnelInterface = new PersonnelInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     workers.forEach((worker: Worker) => {
       if (worker instanceof CyborgElf) {
         worker.setOutput(worker.getOutput() + 1);
-        PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+        personnelInterface.updateOutput(worker.getName(), worker.getOutput());
         Game.addTotalOutput(1);
       }
     });

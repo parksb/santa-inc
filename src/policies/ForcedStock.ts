@@ -20,6 +20,8 @@ class ForcedStock extends Policy {
   }
 
   execute(): void {
+    const personnelInterface: PersonnelInterface = new PersonnelInterface();
+    const commonInterface: CommonInterface = new CommonInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     Game.updateTotalPresent(80000);
@@ -32,8 +34,8 @@ class ForcedStock extends Policy {
           worker.setOutput(0);
           worker.setImg('/assets/couple.png');
 
-          PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
-          CommonInterface.refreshPlayGround();
+          personnelInterface.updateOutput(worker.getName(), worker.getOutput());
+          commonInterface.refreshPlayGround();
         }
       }
     });

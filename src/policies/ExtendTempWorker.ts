@@ -18,12 +18,13 @@ class ExtendTempWorker extends Policy {
   }
 
   execute(): void {
+    const personnelInterface: PersonnelInterface = new PersonnelInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     workers.forEach((worker: Worker) => {
       if (worker instanceof RegularElf) {
         worker.setOutput(worker.getOutput() + 2);
-        PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+        personnelInterface.updateOutput(worker.getName(), worker.getOutput());
         Game.addTotalOutput(2);
       }
     });

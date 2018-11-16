@@ -11,11 +11,17 @@ import CyborgElf from '../workers/CyborgElf';
 import Tree from '../workers/Tree';
 
 class WorkerInterface {
-  elements: any;
-  workerList: any;
-  personnelInterface: PersonnelInterface;
+  private static instance: WorkerInterface;
+
+  private elements: any;
+  private workerList: any;
+  private personnelInterface: PersonnelInterface;
 
   constructor() {
+    if (WorkerInterface.instance) {
+      return WorkerInterface.instance;
+    }
+
     this.elements = {
       playGround: '#play-ground',
       policyList: '#policy-list',
@@ -37,7 +43,7 @@ class WorkerInterface {
 
     this.personnelInterface = new PersonnelInterface();
 
-    this.attachEvent();
+    WorkerInterface.instance = this;
   }
 
   getElements(): any {

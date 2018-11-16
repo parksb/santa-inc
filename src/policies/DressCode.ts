@@ -1,9 +1,9 @@
 import * as $ from 'jquery';
 import Game from '../Game';
+import CommonInterface from '../interfaces/CommonInterface';
 import Policy from './Policy';
 import Worker from '../workers/Worker';
 import RegularElf from '../workers/RegularElf';
-import CommonInterface from '../interfaces/CommonInterface';
 import Wd40 from './Wd40';
 
 class DressCode extends Policy {
@@ -20,6 +20,7 @@ class DressCode extends Policy {
   }
 
   execute() {
+    const commonInterface:CommonInterface = new CommonInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     RegularElf.addMinOutput(1);
@@ -28,7 +29,7 @@ class DressCode extends Policy {
     workers.forEach((worker: Worker) => {
       if (worker instanceof RegularElf) {
         worker.setImg('/assets/regularElfSuit.gif');
-        CommonInterface.refreshPlayGround();
+        commonInterface.refreshPlayGround();
       }
     });
   }

@@ -18,11 +18,12 @@ class Supervisor extends Policy {
   }
 
   execute(): void {
+    const personnelInterface: PersonnelInterface = new PersonnelInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     workers.forEach((worker: Worker) => {
       worker.setOutput(worker.getOutput() + 1);
-      PersonnelInterface.updateOutput(worker.getName(), worker.getOutput());
+      personnelInterface.updateOutput(worker.getName(), worker.getOutput());
       Game.addTotalOutput(1);
     });
   }
