@@ -3,6 +3,7 @@ import Game from './Game';
 import CommonInterface from './interfaces/CommonInterface';
 import WorkerInterface from './interfaces/WorkerInterface';
 import PolicyInterface from './interfaces/PolicyInterface';
+import PersonnelInterface from './interfaces/PersonnelInterface';
 import Rudolph from './workers/Rudolph';
 import RibbonPractice from './policies/RibbonPractice';
 
@@ -10,6 +11,7 @@ $(document).ready(() => {
   const commonInterface: CommonInterface = new CommonInterface();
   const workerInterface: WorkerInterface = new WorkerInterface();
   const policyInterface: PolicyInterface = new PolicyInterface();
+  const personnelInterface: PersonnelInterface = new PersonnelInterface();
 
   let currentWorkerLevel: any = new Rudolph();
 
@@ -17,8 +19,10 @@ $(document).ready(() => {
   commonInterface.attachMenuEvent();
   commonInterface.attachCreditEvent();
   commonInterface.attachSoundEvent();
+
   workerInterface.attachEvent();
   policyInterface.attachEvent();
+  personnelInterface.attachEvent();
 
   policyInterface.drawPolicyList(new RibbonPractice());
 

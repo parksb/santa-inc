@@ -20,13 +20,13 @@ class PersonnelInterface {
   }
 
   drawPersonnelList(worker: Worker): void {
+    const level = Worker.getLevelList();
+
     $(this.elements.personnelList).append(
       `<li id="${worker.getName()}">` +
       `<img class="item-img" src="${worker.getImg()}"/>` +
       `<p>${worker.getKorName()}` +
-      `<br/><span class="lv">Lv. ${worker.getLevel()}</span>` +
-      '<img class="item-present-img" src="/assets/present.png">' +
-      `<span class="t">${worker.getLevelCost()}</span>` +
+      `<br/><span class="lv">${level[worker.getLevel()]}</span>` +
       `<br/><span class="output">${worker.getOutput()}개 생산</span>` +
       '</p>' +
       '</li>'
@@ -34,7 +34,6 @@ class PersonnelInterface {
   } // drawPersonnelList
 
   attachEvent(): void {
-    // 업그레이드
     $(this.elements.personnelList).delegate('li', 'click', (e: JQuery.Event) => {
       const { id } = <HTMLInputElement>e.currentTarget;
       const workers: Worker[] = Game.getHiredWorkers();
@@ -44,18 +43,20 @@ class PersonnelInterface {
           if (Game.getTotalPresent() >= worker.getLevelCost()) {
             const originalOutput = worker.getOutput();
 
-            Game.updateTotalPresent(-1 * worker.getLevelCost());
-            worker.increaseLevel();
-            Game.addTotalOutput(worker.getOutput() - originalOutput);
+            if (worker.increaseLevel()) {
+              const level = Worker.getLevelList();
 
-            $(`#${id} .lv`).text(`Lv. ${worker.getLevel()}`);
-            $(`#${id} .t`).text(worker.getLevelCost());
-            $(`#${id} .output`).text(`${worker.getOutput()}개 생산`);
+              Game.updateTotalPresent(-1 * worker.getLevelCost());
+              Game.addTotalOutput(worker.getOutput() - originalOutput);
+
+              $(`#${id} .lv`).text(level[worker.getLevel()]);
+              $(`#${id} .output`).text(`${worker.getOutput()}개 생산`);
+            }
           }
         }
       });
     });
-  } // attachHireEvent
+  } // attachEvent
 
   updateOutput(name: string, output: number): void {
     $(`#${name} .output`).text(`${output}개 생산`);

@@ -1,5 +1,5 @@
 abstract class Policy {
-  static cost: number = 0;
+  protected static cost: number = 0;
 
   protected name: string;
   protected korName: string;

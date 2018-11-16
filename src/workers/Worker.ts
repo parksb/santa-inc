@@ -1,7 +1,9 @@
 abstract class Worker {
-  static cost: number = 0;
-  static minOutput: number = 0;
-  static maxOutput: number = 0;
+  static levelList: string[] = ['수습', '주니어', '시니어', '매니저'];
+
+  protected static cost: number = 0;
+  protected static minOutput: number = 0;
+  protected static maxOutput: number = 0;
 
   protected output: number;
   protected level: number;
@@ -14,13 +16,17 @@ abstract class Worker {
 
   constructor() {
     this.output = 0;
-    this.level = 1;
+    this.level = 0;
     this.levelCost = 0;
 
     this.name = '';
     this.korName = '';
 
     this.img = '';
+  }
+
+  static getLevelList(): string[] {
+    return this.levelList;
   }
 
   static getCost(): number {
@@ -96,13 +102,19 @@ abstract class Worker {
     this.output = Math.floor((Math.random() * (max - min + 1))) + min;
   }
 
-  increaseLevel(): void {
+  increaseLevel(): boolean {
     const levelCostRatio: number = 3;
     const outputRatio: number = 10;
 
-    this.level += 1;
-    this.levelCost += Math.floor(this.levelCost / levelCostRatio);
-    this.output += Math.ceil(this.output / outputRatio);
+    if (this.level < 3) {
+      this.level += 1;
+      this.levelCost += Math.floor(this.levelCost / levelCostRatio);
+      this.output += Math.ceil(this.output / outputRatio);
+      
+      return true;
+    }
+
+    return false;
   }
 
   abstract next(): Worker;
