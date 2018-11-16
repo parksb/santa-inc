@@ -2,10 +2,10 @@ import * as $ from 'jquery';
 import Worker from './workers/Worker';
 
 class Game {
-  static totalPresent: number = 100000000;
-  static totalOutput: number = 0;
-  static clickPresent: number = 1;
-  static hiredWorkers: Worker[] = [];
+  private static totalPresent: number = 100000000;
+  private static totalOutput: number = 0;
+  private static clickPresent: number = 1;
+  private static hiredWorkers: Worker[] = [];
 
   static getHiredWorkers(): Worker[] {
     return this.hiredWorkers;
