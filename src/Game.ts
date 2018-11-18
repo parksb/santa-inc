@@ -1,7 +1,7 @@
 import * as $ from 'jquery';
 import Worker from './workers/Worker';
 
-class Game {
+abstract class Game {
   private static totalPresent: number = 100000000;
   private static totalOutput: number = 0;
   private static clickPresent: number = 1;
