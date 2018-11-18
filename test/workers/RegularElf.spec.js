@@ -1,4 +1,4 @@
-import RegularElf from '../src/workers/RegularElf';
+import RegularElf from '../../src/workers/RegularElf';
 
 describe('The method of RegularElf', () => {
   const regularElf = new RegularElf();

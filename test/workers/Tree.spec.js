@@ -1,4 +1,4 @@
-import Tree from '../src/workers/Tree';
+import Tree from '../../src/workers/Tree';
 
 describe('The method of Rudolph', () => {
   const tree = new Tree();

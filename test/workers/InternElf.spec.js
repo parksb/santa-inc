@@ -1,4 +1,4 @@
-import InternElf from '../src/workers/InternElf';
+import InternElf from '../../src/workers/InternElf';
 
 describe('The method of ParttimeElf', () => {
   const internElf = new InternElf();

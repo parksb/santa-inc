@@ -1,4 +1,4 @@
-import ParttimeElf from '../src/workers/ParttimeElf';
+import ParttimeElf from '../../src/workers/ParttimeElf';
 
 describe('The method of ParttimeElf', () => {
   const parttimeElf = new ParttimeElf();

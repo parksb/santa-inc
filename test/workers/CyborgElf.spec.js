@@ -1,4 +1,4 @@
-import CyborgElf from '../src/workers/CyborgElf';
+import CyborgElf from '../../src/workers/CyborgElf';
 
 describe('The method of ParttimeElf', () => {
   const cyborgElf = new CyborgElf();

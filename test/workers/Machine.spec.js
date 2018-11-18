@@ -1,4 +1,4 @@
-import Machine from '../src/workers/Machine';
+import Machine from '../../src/workers/Machine';
 
 describe('The method of ParttimeElf', () => {
   const machine = new Machine();

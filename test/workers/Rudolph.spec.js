@@ -1,4 +1,4 @@
-import Rudolph from '../src/workers/Rudolph';
+import Rudolph from '../../src/workers/Rudolph';
 
 describe('The method of Rudolph', () => {
   const rudolph = new Rudolph();
