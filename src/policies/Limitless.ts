@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import InternElf from '../workers/InternElf';
 
@@ -16,8 +16,10 @@ class Limitless extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     InternElf.addMinOutput(1);
-    $('#internElf .pr').text(`${InternElf.getMinOutput()} ~ ${InternElf.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('internElf');
   }
 
   next(): Policy[] {

@@ -25,7 +25,7 @@ class PolicyInterface {
   private static instance: PolicyInterface;
 
   private elements: any;
-  private policyList: any;
+  private policyTable: any;
 
   constructor() {
     if (PolicyInterface.instance) {
@@ -36,7 +36,7 @@ class PolicyInterface {
       policyList: '#policy-list'
     };
 
-    this.policyList = {
+    this.policyTable = {
       ribbonPractice: RibbonPractice,
       smartWork: SmartWork,
       nightOver: NightOver,
@@ -80,8 +80,8 @@ class PolicyInterface {
     // 정책 채택
     $(this.elements.policyList).delegate('li', 'click', (e: JQuery.Event) => {
       const { id } = <HTMLInputElement>e.currentTarget;
-      const policy: Policy = new this.policyList[id]();
-      const policyClass: any = this.policyList[id];
+      const policy: Policy = new this.policyTable[id]();
+      const policyClass: any = this.policyTable[id];
 
       // 선물이 충분할 경우
       if (Game.getTotalPresent() >= policyClass.getCost()) {

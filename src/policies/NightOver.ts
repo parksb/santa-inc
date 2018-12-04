@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import PassionPay from './PassionPay';
 import Multitasking from './Multitasking';
@@ -18,8 +18,10 @@ class NightOver extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     Rudolph.addMaxOutput(1);
-    $('#rudolph .pr').text(`${Rudolph.getMinOutput()} ~ ${Rudolph.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('rudolph');
   }
 
   next(): Policy[] {

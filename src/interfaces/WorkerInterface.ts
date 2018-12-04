@@ -14,7 +14,7 @@ class WorkerInterface {
   private static instance: WorkerInterface;
 
   private elements: any;
-  private workerList: any;
+  private workerTable: any;
   private personnelInterface: PersonnelInterface;
 
   constructor() {
@@ -31,7 +31,7 @@ class WorkerInterface {
       workerList: '#item-list'
     };
 
-    this.workerList = {
+    this.workerTable = {
       rudolph: Rudolph,
       parttimeElf: ParttimeElf,
       internElf: InternElf,
@@ -89,7 +89,7 @@ class WorkerInterface {
     // 노동자 고용
     $(this.elements.workerList).delegate('li', 'click', (e: JQuery.Event) => {
       const { id } = <HTMLInputElement>e.currentTarget;
-      const workerClass: any = this.workerList[id];
+      const workerClass: any = this.workerTable[id];
 
       // 선물이 충분할 경우
       if (Game.getTotalPresent() >= workerClass.getCost()) {
@@ -120,6 +120,11 @@ class WorkerInterface {
   drawWorker(worker: Worker): void {
     $('#play-ground').append(`<img src="${worker.getImg()}" />`);
   } // drawWorker
+
+  updateOutputRange(id: string): void {
+    const worker: any = this.workerTable[id];
+    $(`#${id} .pr`).text(`${worker.getMinOutput()} ~ ${worker.getMaxOutput()}개 생산`);
+  } // updateOutputRange
 }
 
 export default WorkerInterface;

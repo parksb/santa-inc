@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import ParttimeElf from '../workers/ParttimeElf';
 
@@ -16,8 +16,10 @@ class SplitParttimeWage extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     ParttimeElf.addMaxOutput(1);
-    $('#parttimeElf .pr').text(`${ParttimeElf.getMinOutput()} ~ ${ParttimeElf.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('parttimeElf');
   }
 
   next(): Policy[] {

@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import CyborgElf from '../workers/CyborgElf';
 
@@ -16,7 +16,10 @@ class Idea extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     CyborgElf.addMinOutput(1);
+    workerInterface.updateOutputRange('cyborgElf');
     $('#regularElf .pr').text(`${CyborgElf.getMinOutput()} ~ ${CyborgElf.getMaxOutput()}개 생산`);
   }
 

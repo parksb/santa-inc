@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import Idea from './Idea';
 import RegularElf from '../workers/RegularElf';
@@ -17,8 +17,10 @@ class CompanyLover extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     RegularElf.addMaxOutput(1);
-    $('#regularElf .pr').text(`${RegularElf.getMinOutput()} ~ ${RegularElf.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('regularElf');
   }
 
   next(): Policy[] {

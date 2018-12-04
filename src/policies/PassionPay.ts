@@ -1,4 +1,4 @@
-import * as $ from 'jquery';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import Limitless from './Limitless';
 import InternElf from '../workers/InternElf';
@@ -17,8 +17,10 @@ class PassionPay extends Policy {
   }
 
   execute(): void {
+    const workerInterface: WorkerInterface = new WorkerInterface();
+
     InternElf.addMaxOutput(1);
-    $('#internElf .pr').text(`${InternElf.getMinOutput()} ~ ${InternElf.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('internElf');
   }
 
   next(): Policy[] {

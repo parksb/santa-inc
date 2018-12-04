@@ -1,6 +1,6 @@
-import * as $ from 'jquery';
 import Game from '../Game';
 import CommonInterface from '../interfaces/CommonInterface';
+import WorkerInterface from '../interfaces/WorkerInterface';
 import Policy from './Policy';
 import Worker from '../workers/Worker';
 import RegularElf from '../workers/RegularElf';
@@ -21,10 +21,11 @@ class DressCode extends Policy {
 
   execute() {
     const commonInterface:CommonInterface = new CommonInterface();
+    const workerInterface: WorkerInterface = new WorkerInterface();
     const workers: Worker[] = Game.getHiredWorkers();
 
     RegularElf.addMinOutput(1);
-    $('#regularElf .pr').text(`${RegularElf.getMinOutput()} ~ ${RegularElf.getMaxOutput()}개 생산`);
+    workerInterface.updateOutputRange('regularElf');
 
     workers.forEach((worker: Worker) => {
       if (worker instanceof RegularElf) {
