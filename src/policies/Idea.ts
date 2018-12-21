@@ -12,7 +12,7 @@ class Idea extends Policy {
     this.korName = '사상 검증';
 
     this.description = '어느 정당을 지지하세요?';
-    this.spec = '사이보그 요정 최소 생산 +1';
+    this.spec = '요정봇 최소 생산 +1';
   }
 
   execute(): void {

@@ -2,7 +2,7 @@ import Worker from './Worker';
 import InternElf from './InternElf';
 
 class ParttimeElf extends Worker {
-  static cost: number = 30;
+  static cost: number = 100;
   static minOutput: number = 1;
   static maxOutput: number = 3;
 

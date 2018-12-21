@@ -2,7 +2,7 @@ import Worker from './Worker';
 import ParttimeElf from './ParttimeElf';
 
 class Rudolph extends Worker {
-  static cost: number = 1;
+  static cost: number = 30;
   static minOutput: number = 1;
   static maxOutput: number = 2;
 

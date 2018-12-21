@@ -1,5 +1,6 @@
 import Game from '../Game';
 import Policy from './Policy';
+import BadKidDemo from './BadKidDemo';
 
 class ForcedPresent extends Policy {
   static cost: number = 38000;
@@ -19,7 +20,7 @@ class ForcedPresent extends Policy {
   }
 
   next(): Policy[] {
-    return [];
+    return [new BadKidDemo()];
   }
 }
 

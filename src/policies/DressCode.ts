@@ -33,6 +33,8 @@ class DressCode extends Policy {
         commonInterface.refreshPlayGround();
       }
     });
+
+    RegularElf.img = '/assets/regularElfSuit.gif';
   }
 
   next() {
