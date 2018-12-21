@@ -20,6 +20,8 @@ import ForcedStock from '../policies/ForcedStock';
 import Idea from '../policies/Idea';
 import SongForSanta from '../policies/SongForSanta';
 import TopDown from '../policies/TopDown';
+import BadKidDemo from '../policies/BadKidDemo';
+import GoodKidTon from '../policies/GoodKidTon';
 
 class PolicyInterface {
   private static instance: PolicyInterface;
@@ -55,7 +57,9 @@ class PolicyInterface {
       forcedStock: ForcedStock,
       idea: Idea,
       songForSanta: SongForSanta,
-      topDown: TopDown
+      topDown: TopDown,
+      goodKidTon: GoodKidTon,
+      badKidDemo: BadKidDemo,
     };
 
     PolicyInterface.instance = this;

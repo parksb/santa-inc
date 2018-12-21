@@ -9,6 +9,7 @@ import RegularElf from '../workers/RegularElf';
 import Machine from '../workers/Machine';
 import CyborgElf from '../workers/CyborgElf';
 import Tree from '../workers/Tree';
+import Children from '../workers/Children';
 
 class WorkerInterface {
   private static instance: WorkerInterface;
@@ -39,6 +40,7 @@ class WorkerInterface {
       machine: Machine,
       cyborgElf: CyborgElf,
       tree: Tree,
+      children: Children,
     };
 
     this.personnelInterface = new PersonnelInterface();
