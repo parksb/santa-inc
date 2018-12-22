@@ -2,7 +2,7 @@ import Worker from './Worker';
 import Children from './Children';
 
 class Tree extends Worker {
-  static cost: number = 8000;
+  static cost: number = 9000;
   static minOutput: number = 9;
   static maxOutput: number = 15;
 

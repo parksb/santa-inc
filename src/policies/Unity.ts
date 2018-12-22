@@ -5,7 +5,7 @@ import Worker from '../workers/Worker';
 import RegularElf from '../workers/RegularElf';
 
 class Unity extends Policy {
-  static cost: number = 1500;
+  static cost: number = 7000;
 
   constructor() {
     super();

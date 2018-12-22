@@ -3,7 +3,7 @@ import Children from '../workers/Children';
 import WorkerInterface from '../interfaces/WorkerInterface';
 
 class BadKidDemo extends Policy {
-  static cost: number = 70000;
+  static cost: number = 40000;
 
   constructor() {
     super();

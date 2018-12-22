@@ -12,11 +12,11 @@ class ForcedPresent extends Policy {
     this.korName = '선물 강매';
 
     this.description = '직원들이 자사 제품을 사용하도록 하세요.';
-    this.spec = '선물 50000개 추가';
+    this.spec = '선물 40000개 추가';
   }
 
   execute(): void {
-    Game.updateTotalPresent(50000);
+    Game.updateTotalPresent(40000);
   }
 
   next(): Policy[] {

@@ -5,7 +5,7 @@ import PersonnelInterface from '../interfaces/PersonnelInterface';
 import TopDown from './TopDown';
 
 class Supervisor extends Policy {
-  static cost: number = 9000;
+  static cost: number = 10000;
 
   constructor() {
     super();

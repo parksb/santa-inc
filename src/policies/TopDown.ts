@@ -7,7 +7,7 @@ import ForcedPresent from './ForcedPresent';
 import ForcedStock from './ForcedStock';
 
 class TopDown extends Policy {
-  static cost: number = 20000;
+  static cost: number = 30000;
 
   constructor() {
     super();

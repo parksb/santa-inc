@@ -2,7 +2,7 @@ import Worker from './Worker';
 import Machine from './Machine';
 
 class RegularElf extends Worker {
-  static cost: number = 500;
+  static cost: number = 1000;
   static minOutput: number = 2;
   static maxOutput: number = 7;
 

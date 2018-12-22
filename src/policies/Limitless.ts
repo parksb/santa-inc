@@ -3,7 +3,7 @@ import Policy from './Policy';
 import InternElf from '../workers/InternElf';
 
 class Limitless extends Policy {
-  static cost: number = 600;
+  static cost: number = 900;
 
   constructor() {
     super();

@@ -3,7 +3,7 @@ import Policy from './Policy';
 import ParttimeElf from '../workers/ParttimeElf';
 
 class SplitParttimeWage extends Policy {
-  static cost: number = 200;
+  static cost: number = 300;
 
   constructor() {
     super();

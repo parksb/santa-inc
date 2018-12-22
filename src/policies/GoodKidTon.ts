@@ -4,7 +4,7 @@ import Worker from '../workers/Worker';
 import PersonnelInterface from '../interfaces/PersonnelInterface';
 
 class GoodKidTon extends Policy {
-  static cost: number = 900;
+  static cost: number = 500;
   static n: number = 1;
 
   constructor() {

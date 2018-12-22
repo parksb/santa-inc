@@ -2,7 +2,7 @@ import Worker from './Worker';
 import Tree from './Tree';
 
 class CyborgElf extends Worker {
-  static cost: number = 4000;
+  static cost: number = 5000;
   static minOutput: number = 6;
   static maxOutput: number = 12;
 

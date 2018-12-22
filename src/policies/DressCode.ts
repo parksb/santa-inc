@@ -7,7 +7,7 @@ import RegularElf from '../workers/RegularElf';
 import Wd40 from './Wd40';
 
 class DressCode extends Policy {
-  static cost = 1500;
+  static cost = 5000;
 
   constructor() {
     super();

@@ -5,7 +5,7 @@ import Worker from '../workers/Worker';
 import RegularElf from '../workers/RegularElf';
 
 class ExtendTempWorker extends Policy {
-  static cost: number = 35000;
+  static cost: number = 3000;
 
   constructor() {
     super();

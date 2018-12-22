@@ -4,7 +4,7 @@ import Idea from './Idea';
 import RegularElf from '../workers/RegularElf';
 
 class CompanyLover extends Policy {
-  static cost: number = 20000;
+  static cost: number = 2000;
 
   constructor() {
     super();

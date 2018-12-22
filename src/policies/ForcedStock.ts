@@ -12,11 +12,11 @@ class ForcedStock extends Policy {
     this.korName = '주식 강매';
 
     this.description = '노동이 아닌 다른 방법으로 회사에 기여할 수 있습니다.';
-    this.spec = '선물 80000개 추가';
+    this.spec = '선물 70000개 추가';
   }
 
   execute(): void {
-    Game.updateTotalPresent(80000);
+    Game.updateTotalPresent(70000);
   }
 
   next(): Policy[] {

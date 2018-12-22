@@ -2,7 +2,7 @@ import Worker from './Worker';
 import RegularElf from './RegularElf';
 
 class InternElf extends Worker {
-  static cost: number = 200;
+  static cost: number = 500;
   static minOutput: number = 2;
   static maxOutput: number = 5;
 

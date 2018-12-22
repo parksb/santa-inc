@@ -4,7 +4,7 @@ import Limitless from './Limitless';
 import InternElf from '../workers/InternElf';
 
 class PassionPay extends Policy {
-  static cost: number = 300;
+  static cost: number = 700;
 
   constructor() {
     super();

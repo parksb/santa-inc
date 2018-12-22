@@ -5,7 +5,7 @@ import CyborgElf from '../workers/CyborgElf';
 import PersonnelInterface from '../interfaces/PersonnelInterface';
 
 class Wd40 extends Policy {
-  static cost: number = 6000;
+  static cost: number = 10000;
 
   constructor() {
     super();
