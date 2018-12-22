@@ -78,7 +78,7 @@ class WorkerInterface {
         '<li class="preview">' +
         `<img class="item-img preview-img" src="${nextWorker.getImg()}"/>` +
         '<p>???' +
-        '<img class="item-present-img" src="/assets/present.png">' +
+        '<img class="item-present-img" src="./assets/present.png">' +
         `<span class="t">${nextWorkerClass.getCost()}</span>` +
         '<br/><span class="pr">??? ~ ???개 생산</span>' +
         '</p>' +

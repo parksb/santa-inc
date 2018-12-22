@@ -37,6 +37,11 @@ abstract class Game {
 
   static updateTotalPresent(val: number): void {
     this.totalPresent += val;
+
+    if (this.totalPresent < 0) {
+      this.totalPresent = 0;
+    }
+
     $('#present-num').text(this.totalPresent.toFixed(0));
   }
 }
