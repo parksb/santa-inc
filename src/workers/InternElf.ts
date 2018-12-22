@@ -12,7 +12,7 @@ class InternElf extends Worker {
     this.name = 'internElf';
     this.korName = '인턴 요정';
 
-    this.img = '/assets/internElf.gif';
+    this.img = './assets/internElf.gif';
   }
 
   next(): Worker {

@@ -49,7 +49,7 @@ class CommonInterface {
   } // attachCreditEvent
 
   attachSoundEvent(): void {
-    const audio: any = new Audio('/assets/audios/RudolphBeingExploited.wav');
+    const audio: any = new Audio('./assets/audios/RudolphBeingExploited.wav');
     let flag: boolean = true;
 
     audio.volume = 0.3;

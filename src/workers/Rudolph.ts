@@ -12,7 +12,7 @@ class Rudolph extends Worker {
     this.name = 'rudolph';
     this.korName = '루돌프';
 
-    this.img = '/assets/rudolph.gif';
+    this.img = './assets/rudolph.gif';
   }
 
   next(): Worker {

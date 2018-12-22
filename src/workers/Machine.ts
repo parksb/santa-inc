@@ -12,7 +12,7 @@ class Machine extends Worker {
     this.name = 'machine';
     this.korName = '선물 기계';
 
-    this.img = '/assets/machine.gif';
+    this.img = './assets/machine.gif';
   }
 
   next(): Worker {

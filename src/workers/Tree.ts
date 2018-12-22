@@ -12,7 +12,7 @@ class Tree extends Worker {
     this.name = 'tree';
     this.korName = '트리';
 
-    this.img = '/assets/tree.gif';
+    this.img = './assets/tree.gif';
   }
 
   next(): Worker {

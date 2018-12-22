@@ -63,7 +63,7 @@ class WorkerInterface {
       `<li id="${worker.getName()}">` +
       `<img class="item-img" src="${worker.getImg()}"/>` +
       `<p>${worker.getKorName()}` +
-      '<img class="item-present-img" src="/assets/present.png">' +
+      '<img class="item-present-img" src="./assets/present.png">' +
       `<span class="t">${workerClass.getCost()}</span>` +
       `<br/><span class="pr">${workerClass.getMinOutput()} ~ ${workerClass.getMaxOutput()}개 생산</span>` +
       '</p>' +

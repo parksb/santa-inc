@@ -6,7 +6,7 @@ class RegularElf extends Worker {
   static minOutput: number = 2;
   static maxOutput: number = 7;
 
-  static img: string = '/assets/regularElf.gif';
+  static img: string = './assets/regularElf.gif';
 
   constructor() {
     super();

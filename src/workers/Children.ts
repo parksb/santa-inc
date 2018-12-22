@@ -11,7 +11,7 @@ class Children extends Worker {
     this.name = 'children';
     this.korName = '아이들';
 
-    this.img = '/assets/children.gif';
+    this.img = './assets/children.gif';
   }
 
   next(): Worker {

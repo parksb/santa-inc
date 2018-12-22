@@ -12,7 +12,7 @@ class CyborgElf extends Worker {
     this.name = 'cyborgElf';
     this.korName = '요정봇';
 
-    this.img = '/assets/cyborg.gif';
+    this.img = './assets/cyborg.gif';
   }
 
   next(): Worker {

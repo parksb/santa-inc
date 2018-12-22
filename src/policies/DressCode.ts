@@ -29,12 +29,12 @@ class DressCode extends Policy {
 
     workers.forEach((worker: Worker) => {
       if (worker instanceof RegularElf) {
-        worker.setImg('/assets/regularElfSuit.gif');
+        worker.setImg('./assets/regularElfSuit.gif');
         commonInterface.refreshPlayGround();
       }
     });
 
-    RegularElf.img = '/assets/regularElfSuit.gif';
+    RegularElf.img = './assets/regularElfSuit.gif';
   }
 
   next() {

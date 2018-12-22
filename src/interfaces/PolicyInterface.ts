@@ -71,7 +71,7 @@ class PolicyInterface {
     $(this.elements.policyList).append(
       `<li id="${policy.getName()}">` +
       `<p>${policy.getKorName()}` +
-      '<img class="item-present-img" src="/assets/present.png">' +
+      '<img class="item-present-img" src="./assets/present.png">' +
       `<span class="t">${policyClass.getCost()}</span>` +
       `<br/><span style="font-weight:normal;">${policy.getDescription()}</span>` +
       `<br/><span style="font-size:10pt;color:#A0A0A0;font-weight:normal;">${policy.getSpec()}</span>` +

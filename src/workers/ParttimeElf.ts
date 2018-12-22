@@ -12,7 +12,7 @@ class ParttimeElf extends Worker {
     this.name = 'parttimeElf';
     this.korName = '알바 요정';
 
-    this.img = '/assets/parttimeElf.gif';
+    this.img = './assets/parttimeElf.gif';
   }
 
   next(): Worker {
