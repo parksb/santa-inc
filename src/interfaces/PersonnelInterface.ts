@@ -27,6 +27,8 @@ class PersonnelInterface {
       `<img class="item-img" src="${worker.getImg()}"/>` +
       `<p>${worker.getKorName()}` +
       `<br/><span class="lv">${level[worker.getLevel()]}</span>` +
+      '<img class="item-present-img" src="./assets/present.png">' +
+      `<span class="t">${worker.getLevelCost()}</span>` +
       `<br/><span class="output">${worker.getOutput()}개 생산</span>` +
       '</p>' +
       '</li>'
