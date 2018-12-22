@@ -4,7 +4,8 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: './src/main.js',
+  mode: 'development',
+  entry: './src/main.ts',
   output: {
     path: path.resolve(__dirname, './dist/src/'),
     filename: 'bundle.js'
@@ -17,16 +18,25 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.ts?$/,
+        use: 'ts-loader',
+        exclude: /node_modules/
+      },
+      {
         test: /\.js$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: ['env', 'stage-3'],
+            plugins: ['transform-class-properties']
           }
         }
       }
     ]
+  },
+  resolve: {
+    extensions: ['.ts', '.js']
   },
   plugins: [
     new CopyWebpackPlugin([{
@@ -35,9 +45,6 @@ module.exports = {
     }, {
       from: path.join(__dirname, './assets/'),
       to: path.join(__dirname, './dist/assets/')
-    }, {
-      from: path.join(__dirname, './src/data.js'),
-      to: path.join(__dirname, './dist/src/')
     }])
   ]
 };
