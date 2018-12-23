@@ -12,11 +12,11 @@ class RibbonPractice extends Policy {
     this.korName = '리본묶기 연습';
 
     this.description = '생각보다 어렵습니다.';
-    this.spec = '선물 상자 클릭할 때 선물 1.2개 생산';
+    this.spec = '선물 상자 클릭할 때 선물 1.5개 생산';
   }
 
   execute(): void {
-    Game.setClickPresent(1.2);
+    Game.setClickPresent(1.5);
   }
 
   next(): Policy[] {
