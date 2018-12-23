@@ -80,6 +80,11 @@ body {
     cursor: pointer;
 }
 
+#present-img:active {
+    filter: brightness(95%);
+    -webkit-filter: brightness(95%);
+}
+
 #present-num {
     margin-top: 0;
     margin-bottom: 0;
@@ -162,13 +167,13 @@ body {
     background-color: #303030;
 }
 
-.item-img {
+.worker-img {
     width: 60px;
     height: 60px;
     margin-left: 20px;
 }
 
-#item-list li p, #personnel-list li p {
+#worker-list li p, #personnel-list li p {
     color: white;
     font-size: 12pt;
     font-weight: bold;

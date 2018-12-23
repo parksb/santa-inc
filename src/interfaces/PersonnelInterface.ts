@@ -13,7 +13,27 @@ class PersonnelInterface {
     }
 
     this.elements = {
-      personnelList: '#personnel-list'
+      personnelList: $('#personnel-list'),
+      personnelItem: (
+        name: string,
+        img: string,
+        korName: string,
+        level: string,
+        levelCost: number,
+        output: number,
+      ) => {
+        return (
+          `<li id="${name}">` +
+          `<img class="worker-img" src="${img}"/>` +
+          `<p>${korName}` +
+          `<br/><span class="lv">${level}</span>` +
+          '<img class="item-present-img" src="./assets/present.png">' +
+          `<span class="t">${levelCost}</span>` +
+          `<br/><span class="output">${output}개 생산</span>` +
+          '</p>' +
+          '</li>'
+        );
+      }
     };
 
     PersonnelInterface.instance = this;
@@ -22,21 +42,21 @@ class PersonnelInterface {
   drawPersonnelList(worker: Worker): void {
     const level = Worker.getLevelList();
 
-    $(this.elements.personnelList).append(
-      `<li id="${worker.getName()}">` +
-      `<img class="item-img" src="${worker.getImg()}"/>` +
-      `<p>${worker.getKorName()}` +
-      `<br/><span class="lv">${level[worker.getLevel()]}</span>` +
-      '<img class="item-present-img" src="./assets/present.png">' +
-      `<span class="t">${worker.getLevelCost()}</span>` +
-      `<br/><span class="output">${worker.getOutput()}개 생산</span>` +
-      '</p>' +
-      '</li>'
+    this.elements.personnelList.append(
+      this.elements.personnelItem(
+        worker.getName(),
+        worker.getImg(),
+        worker.getKorName(),
+        level[worker.getLevel()],
+        worker.getLevelCost(),
+        worker.getOutput()
+      )
     );
   } // drawPersonnelList
 
   attachEvent(): void {
-    $(this.elements.personnelList).delegate('li', 'click', (e: JQuery.Event) => {
+    // 직원 승진
+    this.elements.personnelList.delegate('li', 'click', (e: JQuery.Event) => {
       const { id } = <HTMLInputElement>e.currentTarget;
       const workers: Worker[] = Game.getHiredWorkers();
 
@@ -46,7 +66,7 @@ class PersonnelInterface {
             const workerClass: any = worker.constructor;
             const originalOutput: number = worker.getOutput();
 
-            if (worker.getLevel() < 3 && worker.getOutput() < workerClass.getMaxOutput()) {
+            if ((worker.getLevel() < 3) && (worker.getOutput() < workerClass.getMaxOutput())) {
               const level = Worker.getLevelList();
 
               worker.increaseLevel();

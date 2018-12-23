@@ -5,25 +5,37 @@ import Worker from '../workers/Worker';
 class CommonInterface {
   private static instance: CommonInterface;
 
+  private elements: any;
+
   constructor() {
     if (CommonInterface.instance) {
       return CommonInterface.instance;
     }
 
+    this.elements = {
+      playGround: $('#play-ground'),
+      presentImg: $('#present-img'),
+      creditContainer: $('#credit-container'),
+      creditCloseIcon: $('#credit-close-btn'),
+      creditIcon: $('#top-icon-container .fa-user-friends'),
+      audioIcon: $('#top-icon-container .audio-icon'),
+      menuItem: $('#menu li'),
+    };
+
     CommonInterface.instance = this;
   }
 
   attachPresentEvent(): void {
-    $('#present-img').click(() => {
+    this.elements.presentImg.click(() => {
       Game.updateTotalPresent(Game.getClickPresent());
     });
   } // attachPresentEvent
 
   attachMenuEvent(): void {
-    $('#menu li').on('click', (e: JQuery.Event) => {
+    this.elements.menuItem.on('click', (e: JQuery.Event) => {
       const { id } = <HTMLInputElement>e.target;
       const tab: any = {
-        hire: '#item-list',
+        hire: '#worker-list',
         policy: '#policy-list',
         personnel: '#personnel-list'
       };
@@ -37,12 +49,12 @@ class CommonInterface {
   } // attachMenuEvent
 
   attachCreditEvent(): void {
-    $('#top-icon-container .fa-user-friends').on('click', () => {
-      $("#credit-container").css("visibility", "visible").css("opacity", "1");
+    this.elements.creditIcon.on('click', () => {
+      this.elements.creditContainer.css("visibility", "visible").css("opacity", "1");
     });
 
-    $("#credit-close-btn").on('click', () => {
-        $("#credit-container").css("visibility", "hidden").css("opacity", "0");
+    this.elements.creditCloseIcon.on('click', () => {
+      this.elements.creditContainer.css("visibility", "hidden").css("opacity", "0");
     });
   } // attachCreditEvent
 
@@ -54,7 +66,7 @@ class CommonInterface {
     audio.loop = true;
     audio.play();
 
-    $('#top-icon-container .audio-icon').on('click', (e: JQuery.Event) => {
+    this.elements.audioIcon.on('click', (e: JQuery.Event) => {
       if (flag) {
         $(e.currentTarget).attr('class', 'fas fa-play top-icon');
         audio.pause();
@@ -70,9 +82,9 @@ class CommonInterface {
   refreshPlayGround(): void {
     const workers: Worker[] = Game.getHiredWorkers();
 
-    $('#play-ground').html('');
+    this.elements.playGround.html('');
     workers.forEach((worker: Worker) => {
-      $('#play-ground').append(`<img src="${worker.getImg()}" />`);
+      this.elements.palyGround.append(`<img src="${worker.getImg()}" />`);
     });
   } // refreshPlayGround
 }
