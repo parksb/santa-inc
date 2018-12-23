@@ -104,11 +104,10 @@ abstract class Worker {
 
   increaseLevel(): void {
     const levelCostRatio: number = 3;
-    const outputRatio: number = 10;
 
     this.level += 1;
     this.levelCost += Math.floor(this.levelCost / levelCostRatio) + this.output;
-    this.output += Math.ceil(this.output / outputRatio);
+    this.output += 1;
   }
 
   abstract next(): Worker;
