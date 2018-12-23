@@ -9,9 +9,9 @@ class Idea extends Policy {
     super();
 
     this.name = 'idea';
-    this.korName = '사상 검증';
+    this.korName = '사상검증';
 
-    this.description = '어느 정당을 지지하세요?';
+    this.description = '왜 그 단체를 팔로우했죠?';
     this.spec = '정규직 요정 최소 생산 +1';
   }
 
