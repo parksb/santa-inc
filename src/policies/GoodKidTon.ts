@@ -14,7 +14,7 @@ class GoodKidTon extends Policy {
     this.korName = `제${GoodKidTon.n}회 착한 어린이 대회 개최`;
 
     this.description = '산타께서는 모든 것을 알고 계십니다.';
-    this.spec = '무작위 직원 생산 +1';
+    this.spec = '무작위 직원 생산 +2';
   }
 
   getCost(): number {
@@ -27,9 +27,9 @@ class GoodKidTon extends Policy {
     const worker: Worker = workers[Math.floor(Math.random() * workers.length)];
 
     if (worker) {
-      worker.setOutput(worker.getOutput() + 1);
+      worker.setOutput(worker.getOutput() + 2);
       personnelInterface.updateOutput(worker.getName(), worker.getOutput());
-      Game.addTotalOutput(1);
+      Game.addTotalOutput(2);
     }
   }
 
