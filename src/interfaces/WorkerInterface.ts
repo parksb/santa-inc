@@ -1,15 +1,8 @@
 import * as $ from 'jquery';
 import Game from '../Game';
-import Worker from '../workers/Worker';
 import PersonnelInterface from './PersonnelInterface';
-import Rudolph from '../workers/Rudolph';
-import ParttimeElf from '../workers/ParttimeElf';
-import InternElf from '../workers/InternElf';
-import RegularElf from '../workers/RegularElf';
-import Machine from '../workers/Machine';
-import CyborgElf from '../workers/CyborgElf';
-import Tree from '../workers/Tree';
-import Children from '../workers/Children';
+import Worker from '../workers/Worker';
+import WorkerTable from '../data/WorkerTable';
 
 class WorkerInterface {
   private static instance: WorkerInterface;
@@ -32,16 +25,7 @@ class WorkerInterface {
       workerList: '#item-list'
     };
 
-    this.workerTable = {
-      rudolph: Rudolph,
-      parttimeElf: ParttimeElf,
-      internElf: InternElf,
-      regularElf: RegularElf,
-      machine: Machine,
-      cyborgElf: CyborgElf,
-      tree: Tree,
-      children: Children,
-    };
+    this.workerTable = WorkerTable;
 
     this.personnelInterface = new PersonnelInterface();
 

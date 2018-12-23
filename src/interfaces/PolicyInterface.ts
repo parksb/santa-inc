@@ -1,27 +1,7 @@
 import * as $ from 'jquery';
 import Game from '../Game';
 import Policy from '../policies/Policy';
-import RibbonPractice from '../policies/RibbonPractice';
-import SmartWork from '../policies/SmartWork';
-import NightOver from '../policies/NightOver';
-import SplitParttimeWage from '../policies/SplitParttimeWage';
-import PassionPay from '../policies/PassionPay';
-import Multitasking from '../policies/Multitasking';
-import Supervisor from '../policies/Supervisor';
-import Limitless from '../policies/Limitless';
-import Unity from '../policies/Unity';
-import Subcontract from '../policies/Subcontract';
-import CompanyLover from '../policies/CompanyLover';
-import DressCode from '../policies/DressCode';
-import Wd40 from '../policies/Wd40';
-import ExtendTempWorker from '../policies/ExtendTempWorker';
-import ForcedPresent from '../policies/ForcedPresent';
-import ForcedStock from '../policies/ForcedStock';
-import Idea from '../policies/Idea';
-import SongForSanta from '../policies/SongForSanta';
-import TopDown from '../policies/TopDown';
-import BadKidDemo from '../policies/BadKidDemo';
-import GoodKidTon from '../policies/GoodKidTon';
+import PolicyTable from '../data/PolicyTable';
 
 class PolicyInterface {
   private static instance: PolicyInterface;
@@ -38,29 +18,7 @@ class PolicyInterface {
       policyList: '#policy-list'
     };
 
-    this.policyTable = {
-      ribbonPractice: RibbonPractice,
-      smartWork: SmartWork,
-      nightOver: NightOver,
-      splitParttimeWage: SplitParttimeWage,
-      passionPay: PassionPay,
-      multitasking: Multitasking,
-      supervisor: Supervisor,
-      limitless: Limitless,
-      unity: Unity,
-      subcontract: Subcontract,
-      companyLover: CompanyLover,
-      dressCode: DressCode,
-      wd40: Wd40,
-      extendTempWorker: ExtendTempWorker,
-      forcedPresent: ForcedPresent,
-      forcedStock: ForcedStock,
-      idea: Idea,
-      songForSanta: SongForSanta,
-      topDown: TopDown,
-      goodKidTon: GoodKidTon,
-      badKidDemo: BadKidDemo,
-    };
+    this.policyTable = PolicyTable;
 
     PolicyInterface.instance = this;
   }
