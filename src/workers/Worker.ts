@@ -102,19 +102,13 @@ abstract class Worker {
     this.output = Math.floor((Math.random() * (max - min + 1))) + min;
   }
 
-  increaseLevel(): boolean {
+  increaseLevel(): void {
     const levelCostRatio: number = 3;
     const outputRatio: number = 10;
 
-    if (this.level < 3) {
-      this.level += 1;
-      this.levelCost += Math.floor(this.levelCost / levelCostRatio);
-      this.output += Math.ceil(this.output / outputRatio);
-      
-      return true;
-    }
-
-    return false;
+    this.level += 1;
+    this.levelCost += Math.floor(this.levelCost / levelCostRatio) + this.output;
+    this.output += Math.ceil(this.output / outputRatio);
   }
 
   abstract next(): Worker;

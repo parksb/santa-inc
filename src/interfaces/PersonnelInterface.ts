@@ -43,10 +43,13 @@ class PersonnelInterface {
       workers.forEach((worker: Worker) => {
         if (worker.getName() === id) {
           if (Game.getTotalPresent() >= worker.getLevelCost()) {
-            const originalOutput = worker.getOutput();
+            const workerClass: any = worker.constructor;
+            const originalOutput: number = worker.getOutput();
 
-            if (worker.increaseLevel()) {
+            if (worker.getLevel() < 3 && worker.getOutput() < workerClass.getMaxOutput()) {
               const level = Worker.getLevelList();
+
+              worker.increaseLevel();
 
               Game.updateTotalPresent(-1 * worker.getLevelCost());
               Game.addTotalOutput(worker.getOutput() - originalOutput);
