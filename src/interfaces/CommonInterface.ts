@@ -38,13 +38,11 @@ class CommonInterface {
 
   attachCreditEvent(): void {
     $('#top-icon-container .fa-user-friends').on('click', () => {
-      const width: number = 600;
-      const height: number = 500;
-      const posX: number = (window.screen.availWidth - width) / 2;
-      const posY: number = (window.screen.availHeight - height) / 2;
-      const option: string = `width=${width}, height=${height}, top=${posY}, left=${posX} resizable=no, scrollbars=no, status=no;`;
+      $("#credit-container").css("visibility", "visible").css("opacity", "1");
+    });
 
-      window.open('credit.html', '', option);
+    $("#credit-close-btn").on('click', () => {
+        $("#credit-container").css("visibility", "hidden").css("opacity", "0");
     });
   } // attachCreditEvent
 
