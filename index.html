@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Santa Inc.</title>
+
+    <link rel="shortcut icon" href="./assets/meta/favicon.ico" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css" />
+    <link rel="stylesheet" href="./style.css" />
+
+    <meta property="og:title" content="Santa Inc.">
+    <meta property="og:image" content="https://parksb.github.io/project/santainc/assets/meta/preview.png">
+    <meta property="og:description" content="🎅 세계를 선도하는 글로벌 기업 (주)산타">
+
+    <meta name="twitter:title" content="Santa Inc.">
+    <meta name="twitter:description" content="🎅 세계를 선도하는 글로벌 기업 (주)산타">
+    <meta name="twitter:image" content="https://parksb.github.io/project/santainc/assets/meta/preview.png">
+    <meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body>
+    <div id="sidebar">
+        <div id="present">
+            <img id="present-img" src="./assets/present.png" />
+            <p id="present-num">CLICK!</p>
+            <p id="present-info">1초당 0개 생산중!</p>
+            <ul id="menu">
+                <li class="m-list m-on" id="hire">고용</li>
+                <li class="m-list m-off" id="policy">정책</li>
+                <li class="m-list m-off" id="personnel">인사</li>
+            </ul>
+        </div>
+        <ul id="worker-list" class="on list">
+            <li id="preview">
+                <img class="worker-img preview-img" src="./assets/rudolph.gif" />
+                <p>???
+                    <img class="item-present-img" src="./assets/present.png" />
+                    <span class="t">30</span>
+                    <br />
+                    <span class="pr">??? ~ ???개 생산</span>
+                </p>
+            </li>
+        </ul>
+        <ul id="policy-list" class="off list"></ul>
+        <ul id="personnel-list" class="off list"></ul>
+    </div>
+
+    <div id="top-icon-container">
+        <a target="_blank" href="https://github.com/ParkSB/santa-inc">
+            <i class="fab fa-github top-icon"></i>
+        </a>
+        <i class="fas fa-user-friends top-icon"></i>
+        <i class="fas fa-pause top-icon audio-icon"></i>
+    </div>
+
+    <div id="play-ground"></div>
+
+    <div id="credit-container" class="overlay">
+        <div id="credit-body">
+            <div id="credit-close-btn">&times;</div>
+            <div class="credit-box">
+                <img src="https://harooo.com/img/sbprofilepic.jpg" />
+                <p>박성범</p>
+            </div>
+            <div class="credit-box">
+                <img src="https://harooo.com/img/dbprofilepic.jpg" />
+                <p>김다빈</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./src/bundle.js"></script>
+</body>
+
+</html>

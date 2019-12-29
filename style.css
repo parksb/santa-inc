@@ -1,0 +1,270 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family: 'Spoqa Han Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #E9EAED;
+    background-image: url("assets/floor.png");
+    background-repeat: repeat;
+    background-size: 5%;
+}
+
+#top-icon-container {
+    height: 18px;
+    padding: 10px;
+}
+
+.top-icon {
+    margin-left: 12px;
+    color: #F3AC00;
+    float: right;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#play-ground {
+    position: relative;
+    z-index: 1;
+    padding-left: 320px;
+    padding-bottom: 30px;
+}
+
+#sidebar{
+    position: fixed;
+    background-color: #333333;
+    width: 300px;
+    height: 100%;
+    float: left;
+    overflow-y: auto;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+::-webkit-scrollbar {
+    background: #333333;
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background: #0DA22A;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: #0D921A;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #0D921A;
+}
+::-webkit-scrollbar-track:active {
+    background: #333333;
+}
+
+#present {
+    height: 300px;
+    width: 300px;
+    background-color: brown;
+    text-align: center;
+}
+
+#present-img {
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#present-img:active {
+    filter: brightness(95%);
+    -webkit-filter: brightness(95%);
+}
+
+#present-num {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #F3AC00;
+    font-weight: bold;
+    font-size: 24pt;
+}
+
+#present-info {
+    margin-top: 0;
+    color: #F3AC00;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+.t {
+    color: #F3AC00;
+}
+
+.pr, .lv {
+    font-weight: normal;
+}
+
+.floor {
+    width: 380px;
+    height: 200px;
+    float: left;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#menu {
+    margin-top: 40px;
+    padding: 0;
+}
+
+#menu li {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    float: left;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#menu li:hover {
+    background-color: #A04030;
+}
+
+.m-on {
+    background-color: #A04030;
+}
+
+.m-off {
+    background-color: #C05040;
+}
+
+.on {
+    display: inline;
+}
+.off {
+    display: none;
+}
+
+.list {
+    padding: 0;
+}
+
+.list li {
+    width: 100%;
+    margin-top: 2px;
+    background-color: #3F3F3F;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    cursor: pointer;
+}
+
+.list li:hover {
+    background-color: #303030;
+}
+
+.worker-img {
+    width: 60px;
+    height: 60px;
+    margin-left: 20px;
+}
+
+#worker-list li p, #personnel-list li p {
+    color: white;
+    font-size: 12pt;
+    font-weight: bold;
+    float: right;
+    text-align: right;
+    margin-right: 30px;
+    margin-top: 3px;
+}
+
+#personnel-list .output {
+    font-weight: normal;
+}
+
+#policy-list li {
+    font-size: 12pt;
+    font-weight: bold;
+    padding-left: 20px;
+    color: white;
+}
+
+#policy-list p {
+    word-break: keep-all;
+    padding-right: 30px;
+}
+
+.item-present-img {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+ }
+
+.preview-img {
+    filter: brightness(0%);
+    -webkit-filter: brightness(0%);
+}
+
+#play-ground img {
+    width: 50px;
+    height: 50px;
+}
+
+#credit-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms ease-in-out;
+    z-index: 999;
+}
+
+#credit-body {
+    margin: 70px auto;
+    padding: 60px 20px 10px 20px;
+    background: #A52A2A;
+    width: 30%;
+    position: relative;
+    overflow: hidden;
+}
+
+#credit-close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 26px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #F3AC00;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 700px){
+    #credit-body{
+        width: 70%;
+    }
+}
+
+.credit-box {
+    width: 50%;
+    float: left;
+}
+
+.credit-box p {
+    text-align: center;
+    font-weight: bold;
+    color: #F3AC00;
+}
+
+.credit-box img {
+    width: 100%;
+}
