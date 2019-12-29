@@ -7,7 +7,7 @@
 
 Santa Inc.는 루돌프와 요정을 착취하는 clicker 게임입니다. 초국적 블랙 기업 산타 주식회사를 운영해보세요! 
  
-# [🎮 PLAY (Web)](https://parksb.github.io/project/santainc/)
+# [🎮 PLAY (Web)](https://parksb.github.io/santa-inc/)
 
 ![Santa Inc.](assets/meta/preview.png)
 
